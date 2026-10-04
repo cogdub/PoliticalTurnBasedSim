@@ -1,6 +1,6 @@
 # Technical Architecture: Natural-Language Grand Strategy (working title)
 
-Status: **PROPOSAL, awaiting approval.** No game code has been written yet.
+Status: **Approved** (TypeScript, Europe prototype slice, Anthropic models with bring-your-own key, browser-first, narrative summaries). Phase 0 and a first Phase 1 vertical slice are implemented — see §25 for what was built and where it deviates from this design.
 
 Core principle, which every section below has to uphold:
 
@@ -1219,10 +1219,60 @@ Because everything goes through `LlmGateway` with schema-constrained outputs, a 
 
 ---
 
-## 24. Decisions requested from you before implementation
+## 24. Decisions (answered)
+
+| Question | Decision |
+|---|---|
+| Stack | TypeScript monorepo, Node server, React + MapLibre client, SQLite saves |
+| Prototype region | Europe / Eastern Europe |
+| LLM provider | Anthropic models behind the gateway; bring-your-own API key in early builds |
+| Platform | Browser-first; desktop packaging later |
+| Presentation | Narrative summaries first, numbers as drill-down |
+
+The original questions are kept below for the record.
 
 1. **Stack approval:** TypeScript monorepo (Node server + React/MapLibre client), SQLite saves. Or do you prefer a desktop game engine (Godot/Unity) for the front end?
 2. **Prototype region:** the Europe/Eastern Europe slice proposed in Phase 1, or another theater (e.g. East Asia: China, Taiwan, Japan, South Korea, US, Philippines…)?
 3. **LLM provider policy:** Anthropic models as primary behind the gateway. Is bring-your-own-API-key acceptable for early builds?
 4. **Platform target:** browser-first (fastest iteration), with desktop packaging later?
 5. **Realism vs accessibility dial:** should the prototype expose full numbers (Paradox-style) or lean on narrative summaries with drill-down?
+
+
+---
+
+## 25. Implementation status (prototype slice)
+
+### What exists
+
+| Area | Where | Notes |
+|---|---|---|
+| Action ontology (24 families) + LLM output contracts | `packages/schemas` | Zod; doubles as structured-output schemas |
+| Deterministic engine | `packages/engine` | economy & trade & commodities, politics & elections & coups, military & warfare, projects & legislation, diplomacy & treaties & commitments, intelligence & secrets, hazard events, unprompted AI contact |
+| Validator pipeline + authority | `engine/src/actions` | power rules per regime and country (Sejm + presidential veto, Bundestag mandate, EU competences, ECB, court review, institutional compliance) |
+| AI nations | `engine/src/ai` | strategic review, utility AI over the same ontology, cooldowns, negotiation evaluator, salient decisions packaged for LLM deliberation |
+| Turn pipeline | `engine/src/turn` | simultaneous orders, fixed phase order, invariants, fog-of-war report |
+| Scenario | `data/scenarios/2026-01-01` | 11 countries + Rest-of-World aggregate, 234 provinces, NATO/EU/UNSC/CSTO/SCO, Russia–Ukraine war with ongoing operations, sanctions, trade matrix, river barriers |
+| Map build | `tools/geo` | Natural Earth → provinces, adjacency, approximate line of contact |
+| LLM gateway | `packages/llm` | Claude via `@anthropic-ai/sdk` (`messages.parse` + Zod output format, prompt caching, server-side refusal fallback, per-turn budget); offline and scripted gateways |
+| Agents | `packages/agents` | intent parser (LLM, rule fallback), leader dialogue (extract → evaluate → respond → validate), group meetings with floor manager and motions, narrator, advisor, deliberator |
+| Saves | `packages/persistence` | SQLite: gzip-JSON snapshots per turn, event log, reports, LLM log; rewind |
+| Server / client | `apps/server`, `apps/client` | Fastify API; React + MapLibre UI |
+| Tests | `tests/` | determinism, invariants, save/load, authority, projects, adversarial evals, diplomacy validation; live LLM evals behind `GS_LIVE_EVALS=1` |
+
+### Deviations from the design (deliberate, for the prototype)
+
+- **Content definitions** (projects, techs, equipment) live in `engine/src/defs/catalog.ts` instead of `/data/defs`. Moving them to data files for modding is mechanical.
+- **Relations** are a nested map rather than dense typed arrays. At 12 actors that's simpler and fast; switch when scaling to ~200.
+- **Change journal**: systems emit typed *facts* (with importance, visibility, reliability) rather than a path-level mutation journal. Facts drive reports, history and narration. A path-level journal can be added for debugging.
+- **Snapshots** are gzip JSON rather than MessagePack + zstd (no native dependencies).
+- **Money** is in USD billions, not millions.
+- **Conversations** are stored in world state, with bounded transcripts and rolling summaries, so a single snapshot restores everything.
+- **Sea zones, naval combat and nuclear escalation** are not modelled yet. Navies exist as units; strategic strike campaigns and air defense are modelled.
+
+### Known limitations and next steps
+
+- Starting data are approximate and flagged for fact-checking (see each country file's `sources`). The line of contact is low-confidence.
+- The live Claude path is implemented but was not exercised in CI (no API key in the build environment). Run `GS_LIVE_EVALS=1 ANTHROPIC_API_KEY=… npm test` for the live parser evals.
+- Offline mode (no key) uses the rule parser and template dialogue. It is fully playable but much less flexible.
+- Balance needs a Monte-Carlo harness (§20, Phase 2). Current 24-month AI-only runs stay plausible but have not been tuned.
+- Next milestones: LLM-written unprompted messages, sea zones, a richer front model (sub-province), expanding the scenario toward Tier-1 countries, mod loader.

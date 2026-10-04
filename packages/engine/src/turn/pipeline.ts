@@ -17,6 +17,7 @@ import { economyPhase, snapshotCommodityPrices } from "../systems/economy.js";
 import { politicsPhase } from "../systems/politics.js";
 import { intelPhase } from "../systems/intel.js";
 import { eventsPhase } from "../systems/events.js";
+import { contactsPhase } from "../systems/contacts.js";
 import { annualGrowth, debtToGdp, gdp, provincesControlledBy } from "../state/queries.js";
 import type { CountryId, TurnReport, WorldState } from "../state/types.js";
 import { checkInvariants } from "./invariants.js";
@@ -58,6 +59,7 @@ export function resolveTurn(state: WorldState, plan: AiPlan, opts: ResolveOption
   politicsPhase(ctx);
   intelPhase(ctx);
   eventsPhase(ctx);
+  contactsPhase(ctx);
 
   // 3. History: major public facts become timeline records.
   for (const f of ctx.facts) {
@@ -76,7 +78,7 @@ export function resolveTurn(state: WorldState, plan: AiPlan, opts: ResolveOption
   state.pendingOrders = [];
   state.attention = {};
   for (const p of Object.values(state.proposals)) {
-    if (p.status === "open" && p.to.includes(player) && !state.inbox.some((m) => m.proposalId === p.id)) {
+    if (p.status === "open" && p.to.includes(player) && p.via !== "conversation" && !state.inbox.some((m) => m.proposalId === p.id)) {
       state.inbox.push({ id: `msg-${p.id}`, turn: state.meta.turn, from: p.from, subject: "Diplomatic proposal", proposalId: p.id, text: p.summary, private: true, read: false });
     }
   }
