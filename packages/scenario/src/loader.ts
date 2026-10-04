@@ -65,7 +65,7 @@ export function loadScenario(dir: string, opts: LoadOptions = {}): WorldState {
     countries: {}, persons: {}, provinces: {}, units: {}, projects: {}, agreements: {}, organizations: {}, relations: {}, wars: {},
     operations: {}, sanctions: {}, trade: { flows: {}, baseFlows: {}, tariffs: {}, baseFriction: {} }, markets: {} as WorldState["markets"],
     intel: { secrets: {}, reports: [], distortions: {}, sharing: [], lastNear: {} },
-    memory: { commitments: {}, grievances: [] }, motions: {}, history: [], proposals: {}, inbox: [], pendingOrders: [], barriers: [],
+    memory: { commitments: {}, grievances: [] }, motions: {}, history: [], proposals: {}, inbox: [], pendingOrders: [], barriers: [], conversations: {}, attention: {},
   };
 
   // ── Provinces ──

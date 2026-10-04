@@ -214,7 +214,7 @@ export function mapView(state: WorldState) {
   const me = state.meta.playerCountryId;
   const friendly = new Set([me, ...defendersOf(state, me)]);
   const provinces = Object.values(state.provinces).map((p) => ({
-    id: p.id, owner: p.owner, controller: p.controller, claims: p.claims.map((c) => c.by), unrest: Math.round(p.unrest),
+    id: p.id, name: p.name, lat: p.lat, lon: p.lon, owner: p.owner, controller: p.controller, claims: p.claims.map((c) => c.by), unrest: Math.round(p.unrest),
     contested: Object.keys(p.controlPressure).length > 0, pressure: Math.round(Math.max(0, ...Object.values(p.controlPressure)) * 100),
     damage: Math.round(p.damage * 100), fortification: Math.round(p.fortification),
   }));

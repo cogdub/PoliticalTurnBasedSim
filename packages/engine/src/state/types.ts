@@ -44,6 +44,10 @@ export interface WorldState {
   /** Messages AI governments have sent to the player this turn (unprompted contact). */
   inbox: InboxMessage[];
   pendingOrders: PendingOrder[];
+  /** Diplomatic conversations (transcripts are bounded; summaries keep long-term memory). */
+  conversations: Record<string, Conversation>;
+  /** Remaining leader attention for the player this month (exchanges per leader). */
+  attention: Record<CountryId, number>;
   /** Province pairs separated by a major river/strait: attacks across them are much harder. */
   barriers: [ProvinceId, ProvinceId][];
   /** Last turn's resolved report (structured; narration is generated from it). */
@@ -767,6 +771,32 @@ export interface PendingOrder {
   actor: CountryId;
   /** Validated, resolved action awaiting effect application at turn end. */
   action: import("../actions/types.js").ResolvedAction;
+}
+
+export interface ConversationMessage {
+  id: string;
+  turn: number;
+  speaker: CountryId;
+  text: string;
+  /** Structured meaning attached by the engine (acts, proposals). */
+  acts?: { kind: string; text: string }[];
+  /** Hidden truth record for AI speakers (never sent to the client). */
+  hidden?: { sincerity: string; rationale: string; trueStance: string };
+}
+
+export interface Conversation {
+  id: string;
+  kind: "bilateral" | "summit";
+  title: string;
+  participants: CountryId[];
+  orgId?: OrgId;
+  startedTurn: number;
+  messages: ConversationMessage[];
+  /** Rolling summary of older messages (long-term memory). */
+  summary: string;
+  proposalIds: string[];
+  motionIds: string[];
+  closed: boolean;
 }
 
 export interface InboxMessage {

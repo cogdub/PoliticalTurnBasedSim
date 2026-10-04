@@ -215,7 +215,7 @@ function resolveMotions(ctx: TurnContext) {
   }
 }
 
-function enactMotion(ctx: TurnContext, m: Motion) {
+export function enactMotion(ctx: TurnContext, m: Motion) {
   const { state } = ctx;
   const org = state.organizations[m.orgId];
   switch (m.kind) {
@@ -232,15 +232,30 @@ function enactMotion(ctx: TurnContext, m: Motion) {
       const host = m.target ?? m.proposer;
       const dest = m.provinces?.[0] ?? state.countries[host]?.capital;
       if (!dest) break;
+      const sent: string[] = [];
       for (const mem of org.members) {
         if (mem === host) continue;
-        const unit = Object.values(state.units).filter((u) => u.country === mem && u.domain === "land" && !u.operationId && !u.destination && !u.hostedBy).sort((a, b) => a.personnel - b.personnel)[0];
-        if (!unit || (mem === state.meta.playerCountryId && m.proposer !== mem)) continue;
-        unit.destination = dest;
-        unit.transitMonths = 1;
-        unit.hostedBy = host;
-        unit.posture = "defend";
+        // Each ally detaches a battalion/brigade-sized contingent from its largest available formation.
+        const parent = Object.values(state.units).filter((u) => u.country === mem && u.domain === "land" && !u.operationId && !u.destination && !u.hostedBy && u.personnel > 5000).sort((a, b) => b.personnel - a.personnel || a.id.localeCompare(b.id))[0];
+        if (!parent) continue;
+        const size = Math.min(4000, Math.round(parent.personnel * 0.15));
+        const frac = size / parent.personnel;
+        const equipment: Record<string, number> = {};
+        for (const [eq, n] of Object.entries(parent.equipment)) {
+          const k = Math.floor(n * frac);
+          if (k > 0) { equipment[eq] = k; parent.equipment[eq] -= k; parent.authorized[eq] = Math.max(0, (parent.authorized[eq] ?? 0) - k); }
+        }
+        parent.personnel -= size;
+        parent.authorizedPersonnel -= size;
+        const id = `${mem}-ARF-${m.id}`;
+        state.units[id] = {
+          id, country: mem, name: `${state.countries[mem].adjective} contingent, ${org.short} reaction force`, domain: "land", kind: "battlegroup",
+          personnel: size, equipment, authorized: { ...equipment }, authorizedPersonnel: size, readiness: parent.readiness, morale: parent.morale,
+          experience: parent.experience, supply: 1, location: parent.location, destination: dest, transitMonths: 1, posture: "defend", hostedBy: host,
+        };
+        sent.push(`${countryName(state, mem)} (${size.toLocaleString("en-US")})`);
       }
+      ctx.fact({ category: "diplomacy", text: `${org.short} rapid-response deployment to ${countryName(state, host)} ordered: ${sent.join(", ") || "no units available"}. Forces arrive next month.`, actors: org.members, importance: 2 });
       for (const o of Object.keys(state.countries)) {
         if (org.members.includes(o)) continue;
         const r = rel(state, o, host);

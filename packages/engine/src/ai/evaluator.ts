@@ -54,7 +54,13 @@ export function clauseUtility(state: WorldState, x: Country, from: CountryId, cl
     case "MilitaryAccess":
     case "ForcePresence": {
       const hosting = (cl.from ?? x.id) === x.id || cl.provinces?.some((p) => state.provinces[p]?.owner === x.id);
-      if (!hosting) return { u: 5, why: "basing rights abroad are useful" };
+      if (!hosting) {
+        // Sending forces abroad costs money and stretches the military; worth it if it deters an adversary we care about.
+        const host = cl.from ?? other;
+        const hostThreat = maxThreat(state, host);
+        const u = 3 + hostThreat * 12 * objectiveWeight(x, "alliance_cohesion") + objectiveWeight(x, "deter_adversary") * 4 - objectiveWeight(x, "strategic_autonomy") * 10 - (isAtWar(state, x.id) ? 10 : 0);
+        return { u, why: u > 0 ? "forward presence deters aggression against a partner" : "deploying more forces abroad is costly; allies should carry more of the burden" };
+      }
       const ally = sharesOrg(state, x.id, other, "military_alliance");
       const u = ally ? maxThreat(state, x.id) * 30 + r.opinion * 0.1 - 5 : r.opinion * 0.2 - 30;
       return { u, why: ally ? "allied forces on our soil deter aggression" : "foreign troops on our soil are unacceptable" };

@@ -29,8 +29,10 @@ function resolveUnits(state: WorldState, c: Country, ids: string[], count: numbe
     const matched = pool.filter((u) => u.kind.includes(kindHint) || u.name.toLowerCase().includes(kindHint));
     if (matched.length) pool = matched;
   }
-  // Prefer units not already on an active front / garrisoned far from need.
-  if (near) pool.sort((a, b) => travelMonths(state, a.location, near) - travelMonths(state, b.location, near) || a.id.localeCompare(b.id));
+  // Don't strip other borders: prefer units in interior provinces, then the nearest.
+  const onBorder = (u: MilitaryUnit) => state.provinces[u.location]?.neighbors.some((n) => state.provinces[n] && state.provinces[n].owner !== c.id) ? 1 : 0;
+  if (near) pool = pool.filter((u) => u.location !== near);
+  if (near) pool.sort((a, b) => onBorder(a) - onBorder(b) || travelMonths(state, a.location, near) - travelMonths(state, b.location, near) || a.id.localeCompare(b.id));
   const n = Math.max(1, Math.min(pool.length, Math.round(count ?? 1)));
   return pool.slice(0, n);
 }

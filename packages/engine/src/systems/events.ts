@@ -91,11 +91,12 @@ const EVENTS: EventDef[] = [
     cooldown: 3,
     logit(s, c) {
       // Strike campaigns near a border produce stray drones/missiles.
-      const nearby = Object.values(s.operations).some((o) => o.status === "active" && o.type === "strategic_strikes" && o.country !== c.id && o.objectives.some((t) => s.provinces[t]?.neighbors.some((n) => s.provinces[n]?.owner === c.id)));
+      const atWarWith = (x: string) => Object.values(s.wars).some((w) => w.status === "active" && ((w.attackers.includes(x) && w.defenders.includes(c.id)) || (w.defenders.includes(x) && w.attackers.includes(c.id))));
+      const nearby = Object.values(s.operations).some((o) => o.status === "active" && o.type === "strategic_strikes" && o.country !== c.id && !atWarWith(o.country) && o.objectives.some((t) => s.provinces[t]?.neighbors.some((n) => s.provinces[n]?.owner === c.id)));
       return nearby ? -2.2 : -Infinity;
     },
     fire(ctx, c) {
-      const culprit = Object.values(ctx.state.operations).find((o) => o.status === "active" && o.type === "strategic_strikes" && o.country !== c.id)?.country;
+      const culprit = Object.values(ctx.state.operations).find((o) => o.status === "active" && o.type === "strategic_strikes" && o.country !== c.id && o.objectives.some((t) => ctx.state.provinces[t]?.neighbors.some((n) => ctx.state.provinces[n]?.owner === c.id)))?.country;
       if (culprit) {
         rel(ctx.state, c.id, culprit).threat = clamp(rel(ctx.state, c.id, culprit).threat + 0.08, 0, 1);
         rel(ctx.state, c.id, culprit).opinion -= 5;

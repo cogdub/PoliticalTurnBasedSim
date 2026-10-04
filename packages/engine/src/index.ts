@@ -13,7 +13,7 @@ export { prepareTurn, resolveTurn, metrics, type ResolveOptions } from "./turn/p
 export { checkInvariants } from "./turn/invariants.js";
 export { planAiTurn, type AiPlan, type Deliberation } from "./ai/nation.js";
 export { evaluateProposal, evaluateMotion, evaluateJoinWar } from "./ai/evaluator.js";
-export { answerProposal, enactAgreement } from "./systems/diplomacy.js";
+export { answerProposal, enactAgreement, enactMotion } from "./systems/diplomacy.js";
 export { dashboard, foreignProfile, mapView } from "./view/player.js";
 export { parserContext, leaderBrief } from "./view/briefs.js";
 export { estimate, reliabilityFor } from "./systems/intel.js";

@@ -7,13 +7,15 @@
     "apps/*"
   ],
   "scripts": {
-    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p apps/client/tsconfig.json",
     "test": "vitest run",
     "dev:server": "npm run dev -w @gs/server",
     "dev:client": "npm run dev -w @gs/client",
     "dev": "concurrently -n server,client \"npm run dev:server\" \"npm run dev:client\"",
     "cli": "tsx apps/cli/src/main.ts",
-    "scenario:build": "tsx apps/cli/src/main.ts scenario-check"
+    "scenario:build": "tsx apps/cli/src/main.ts scenario-check",
+    "build": "npm run build -w @gs/client",
+    "start": "npm run build && tsx apps/server/src/main.ts"
   },
   "engines": {
     "node": ">=22.13"
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@types/node": "^26.6.4",
     "concurrently": "^10.0.5",
+    "playwright-core": "^1.63.0",
     "tsx": "^4.23.15",
     "typescript": "^5.9.3",
     "vitest": "^5.0.3"

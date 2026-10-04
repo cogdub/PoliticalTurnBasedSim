@@ -74,6 +74,7 @@ export function resolveTurn(state: WorldState, plan: AiPlan, opts: ResolveOption
   state.meta.date = turnToDate(state.meta.turn);
   state.meta.actionsRemaining = state.meta.actionsPerTurn;
   state.pendingOrders = [];
+  state.attention = {};
   for (const p of Object.values(state.proposals)) {
     if (p.status === "open" && p.to.includes(player) && !state.inbox.some((m) => m.proposalId === p.id)) {
       state.inbox.push({ id: `msg-${p.id}`, turn: state.meta.turn, from: p.from, subject: "Diplomatic proposal", proposalId: p.id, text: p.summary, private: true, read: false });
