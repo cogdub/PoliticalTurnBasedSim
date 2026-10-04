@@ -161,7 +161,7 @@ function Settings({ onClose, onExit }: { onClose: () => void; onExit: () => void
         <div className="row"><h2>Settings</h2><button onClick={onClose}>✕</button></div>
         <h3>Language model</h3>
         <p className="small">{status}</p>
-        <p className="small muted">Bring your own Anthropic API key. It is kept in the local server's memory only and never written to disk or to save files.</p>
+        <p className="small muted">Bring your own Anthropic API key. It is held in the server's memory for your session only — never written to disk or save files — and is forgotten when the server restarts.</p>
         <div className="row">
           <input type="password" placeholder="sk-ant-…" value={key} onChange={(e) => setKey(e.target.value)} />
           <button className="primary" onClick={async () => { const r = await api.setKey(key); setStatus(r.hasKey ? `Using ${r.llm}` : "Offline mode."); setKey(""); }}>Save key</button>

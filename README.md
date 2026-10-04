@@ -27,7 +27,9 @@ For development with hot reload, use `npm run dev`. The server runs on :8787 and
 
 **Language model:** set `ANTHROPIC_API_KEY`, or paste a key in **Settings** in the game; it is kept in server memory only. Without a key the game runs in **offline mode**, with a rule-based order parser and template dialogue and narration. You can also pick models per role, e.g. `GS_LLM_MODEL=claude-opus-5-5` or `GS_LLM_MODEL_NARRATOR=…`.
 
-Saves are written to `./saves/*.sqlite`. Every month is autosaved, and you can rewind from Settings.
+To host it on a website, see [`docs/DEPLOY.md`](docs/DEPLOY.md) (Docker; Render, Fly.io or your own server).
+
+Saves are written to `./saves/<player>/*.sqlite`. Every month is autosaved, and you can rewind from Settings.
 
 ## Other commands
 
