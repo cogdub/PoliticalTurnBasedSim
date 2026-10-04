@@ -1,0 +1,148 @@
+id: POL
+name: Poland
+adjective: Polish
+sources:
+  - "IMF WEO Oct 2025 (GDP, growth, inflation, debt) — approximate"
+  - "GUS / Eurostat (unemployment, population)"
+  - "NBP (reference rate 4.00% after Dec 2025 cut) — verify"
+  - "Sejm seat distribution after 2023 election, adjusted for defections — approximate"
+  - "SIPRI / MON budget 2025-26 (defense ≈4.5–4.8% of GDP incl. Armed Forces Support Fund) — estimate"
+  - "Equipment counts: open-source estimates (IISS used as reference only)"
+population: { total: 37400000, growthRate: -0.003, workingAgeShare: 0.63, over65Share: 0.2, livingStandard: 66, education: 74, healthcare: 62, poverty: 0.11 }
+economy:
+  currency: PLN
+  fxRegime: float
+  gdpBn: 1000
+  potentialGrowth: 0.03
+  growth: 0.032
+  outputGap: 0.005
+  inflation: 0.028
+  inflationTarget: 0.025
+  unemployment: 0.032
+  naturalUnemployment: 0.034
+  policyRate: 0.04
+  neutralRealRate: 0.015
+  cbIndependence: 0.6
+  debtToGdp: 0.59
+  reservesBn: 260
+  riskPremium: 0.006
+  effectiveInterestRate: 0.045
+  revenue: { income: 0.06, corporate: 0.025, consumption: 0.12, social: 0.14, other: 0.075 }
+  taxRates: { incomeTop: 0.32, corporate: 0.19, vat: 0.23 }
+  spending: { defense: 0.047, social: 0.18, health: 0.055, education: 0.05, infrastructure: 0.045, administration: 0.06, other: 0.02 }
+  exportsBn: 380
+  importsBn: 370
+  commodityProduction: { grain: 35 }
+  commodityConsumption: { oil: 0.7, gas: 21, grain: 30 }
+  energyImportDependence: 0.45
+energy: { productionTwh: 165, consumptionTwh: 172, nuclearGw: 0, renewablesGw: 35 }
+intelCapability: 0.6
+stateCapacity: 0.7
+corruption: 0.3
+hiddenResources: { lithium_brine: 40, shale_gas: 0 }
+government:
+  regimeType: parliamentary_republic
+  regimeLabel: "Parliamentary republic (president with legislative veto)"
+  democracy: true
+  euMember: true
+  leader: POL-tusk
+  headOfState: POL-nawrocki
+  headOfGovernment: POL-tusk
+  rulingParties: [KO, PSL, PL2050, LEW]
+  parties:
+    - { id: KO, name: "Civic Coalition", short: KO, economic: 0.2, social: -0.3, westward: 0.9, support: 0.31, leader: "Donald Tusk" }
+    - { id: PIS, name: "Law and Justice", short: PiS, economic: -0.2, social: 0.7, westward: 0.5, support: 0.27, leader: "PiS candidate" }
+    - { id: KONF, name: "Confederation", short: Konf, economic: 0.7, social: 0.7, westward: 0.1, support: 0.13, leader: "Sławomir Mentzen" }
+    - { id: KKP, name: "Confederation of the Polish Crown", short: KKP, economic: 0.3, social: 1.0, westward: -0.4, support: 0.06, leader: "Grzegorz Braun" }
+    - { id: LEW, name: "The Left", short: Lewica, economic: -0.6, social: -0.7, westward: 0.8, support: 0.06 }
+    - { id: RAZEM, name: "Together", short: Razem, economic: -0.8, social: -0.7, westward: 0.5, support: 0.05 }
+    - { id: PSL, name: "Polish People's Party", short: PSL, economic: 0.0, social: 0.4, westward: 0.7, support: 0.04 }
+    - { id: PL2050, name: "Poland 2050", short: PL2050, economic: 0.2, social: -0.1, westward: 0.9, support: 0.03 }
+    - { id: OTH, name: "Others", short: Other, economic: 0, social: 0, westward: 0.3, support: 0.05 }
+  legislature:
+    name: Sejm
+    chambers:
+      - { id: sejm, name: Sejm, total: 460, electoralSystem: pr, seats: { PIS: 190, KO: 157, PSL: 32, PL2050: 31, LEW: 21, RAZEM: 5, KONF: 16, KKP: 3, OTH: 5 } }
+    veto: { holder: POL-nawrocki, partyId: PIS, override: 0.6 }
+  institutions:
+    - { kind: constitutional_court, name: "Constitutional Tribunal (contested legitimacy)", independence: 0.5, loyalty: 0.15 }
+    - { kind: central_bank, name: "National Bank of Poland", independence: 0.6, loyalty: 0.2 }
+    - { kind: military, name: "Polish Armed Forces", independence: 0.3, loyalty: 0.85 }
+    - { kind: security_services, name: "ABW / SKW", independence: 0.35, loyalty: 0.75 }
+    - { kind: bureaucracy, name: "Civil service", independence: 0.4, loyalty: 0.7 }
+    - { kind: media, name: "Free press", independence: 0.85, loyalty: 0.3 }
+  blocs:
+    - { template: urban_professionals, size: 0.24, clout: 0.2, satisfaction: 52 }
+    - { template: industrial_workers, size: 0.2, clout: 0.12, satisfaction: 40 }
+    - { template: rural_conservatives, size: 0.2, clout: 0.12, satisfaction: 30, stance: { westward: 0.4 } }
+    - { template: business_elite, size: 0.04, clout: 0.2, satisfaction: 45 }
+    - { template: pensioners, size: 0.17, clout: 0.1, satisfaction: 38, stance: { westward: 0.4 } }
+    - { template: youth, size: 0.12, clout: 0.08, satisfaction: 42 }
+    - { template: security_establishment, size: 0.03, clout: 0.18, satisfaction: 62, stance: { westward: 0.9 } }
+  elections:
+    - { id: pol-sejm-2027, kind: legislative, date: "2027-10", chamberId: sejm, description: "Sejm election", termYears: 4 }
+    - { id: pol-pres-2030, kind: presidential, date: "2030-05", description: "presidential election", termYears: 5 }
+  laws: { conscription: none, pressFreedom: 0.8, retirementAge: 65, immigration: managed }
+  approval: 38
+  stability: 62
+  legitimacy: 72
+  eliteLoyalty: 60
+  militaryLoyalty: 80
+persons:
+  - id: POL-tusk
+    name: Donald Tusk
+    title: Prime Minister
+    birthYear: 1957
+    partyId: KO
+    inOfficeSince: "2023-12"
+    personality: { riskTolerance: 0.45, agreeableness: 0.6, honesty: 0.65, ego: 0.55, pragmatism: 0.75, paranoia: 0.45 }
+    ideologyNote: "Centrist liberal, strongly pro-EU and Atlanticist; hawkish on Russia."
+    speakingStyle: "Sharp, ironic, fluent in EU-speak; blunt about Moscow; short punchy sentences."
+    biography: "Former President of the European Council; third term as Polish prime minister since December 2023."
+  - id: POL-nawrocki
+    name: Karol Nawrocki
+    title: President
+    birthYear: 1983
+    partyId: PIS
+    inOfficeSince: "2025-08"
+    personality: { riskTolerance: 0.5, agreeableness: 0.35, honesty: 0.55, ego: 0.65, pragmatism: 0.5, paranoia: 0.5 }
+    ideologyNote: "National-conservative, PiS-backed; skeptical of EU integration, pro-US."
+    speakingStyle: "Combative, patriotic, historical references."
+    biography: "Historian and former head of the Institute of National Remembrance; elected president in 2025."
+military:
+  activePersonnel: 216000
+  reserves: 350000
+  stockpile: { mbt: 120, ifv: 300, artillery: 60, drone: 1000, sam_short: 200 }
+  production: { artillery: 4, ifv: 8, mbt: 1.5, drone: 300, sam_short: 3 }
+  munitions: 400
+  munitionsProduction: 15
+  readinessBase: 0.75
+  doctrineQuality: 0.7
+  techLevel: 0.75
+units:
+  - { id: POL-18MD, name: "18th Mechanized Division", kind: mechanized_division, personnel: 20000, location: POL-LUBELSKIE, equipment: { mbt: 250, ifv: 350, artillery: 120, mlrs: 40, sam_short: 15 } }
+  - { id: POL-16MD, name: "16th Mechanized Division", kind: mechanized_division, personnel: 16000, location: POL-WARMINSKO-MAZURSKIE, equipment: { mbt: 180, ifv: 300, artillery: 100, mlrs: 30, sam_short: 10 } }
+  - { id: POL-11ACD, name: "11th Armored Cavalry Division", kind: armored_division, personnel: 16000, location: POL-LUBUSKIE, equipment: { mbt: 230, ifv: 280, artillery: 90, mlrs: 30, sam_short: 10 } }
+  - { id: POL-12MD, name: "12th Mechanized Division", kind: mechanized_division, personnel: 15000, location: POL-ZACHODNIOPOMORSKIE, equipment: { mbt: 120, ifv: 300, artillery: 90, mlrs: 30, sam_short: 10 } }
+  - { id: POL-1ID, name: "1st Legions Infantry Division", kind: infantry_division, personnel: 12000, location: POL-PODLASKIE, equipment: { mbt: 60, ifv: 150, artillery: 60, mlrs: 20, sam_short: 10 } }
+  - { id: POL-WOT, name: "Territorial Defence Force", kind: territorial_defense, personnel: 42000, location: POL-MAZOWIECKIE, equipment: { ifv: 50, drone: 600 } }
+  - { id: POL-AF, name: "Polish Air Force", domain: air, kind: tactical_air, personnel: 18000, location: POL-WIELKOPOLSKIE, equipment: { fighter: 90, sam_long: 3, sam_short: 20 } }
+  - { id: POL-NAVY, name: "Polish Navy", domain: naval, kind: fleet, personnel: 7000, location: POL-POMORSKIE, equipment: { warship: 3, submarine: 1 } }
+strategy:
+  objectives:
+    - { kind: national_security, weight: 1.0 }
+    - { kind: deter_adversary, weight: 0.9, target: RUS }
+    - { kind: alliance_cohesion, weight: 0.9 }
+    - { kind: eu_integration, weight: 0.6 }
+    - { kind: economic_growth, weight: 0.7 }
+    - { kind: re_election, weight: 0.6 }
+  postures: { RUS: adversary, BLR: rival, USA: ally, DEU: ally, FRA: ally, GBR: ally, LTU: ally, UKR: partner, TUR: partner, CHN: neutral }
+  hiddenAgenda:
+    - "Secure a permanent, larger US troop presence on Polish soil"
+    - "Build the strongest land army in the EU by 2030"
+  redLines:
+    - { description: "Any foreign military incursion into Polish territory", key: "territorial_violation" }
+provinceOverrides:
+  POL-PODLASKIE: { fortification: 15 }
+  POL-LUBELSKIE: { fortification: 12 }
+  POL-WARMINSKO-MAZURSKIE: { fortification: 10 }

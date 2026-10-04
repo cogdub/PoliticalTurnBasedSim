@@ -1,0 +1,14 @@
+id: SCENARIO_2026_01_01
+version: 0.1.0
+title: "January 1, 2026 — Europe prototype slice"
+startDate: "2026-01"
+description: >
+  Prototype starting world for the Europe/Eastern-Europe vertical slice. Eleven simulated
+  countries plus a Rest-of-World aggregate actor (economy and trade only).
+countries: [USA, CHN, RUS, UKR, POL, DEU, FRA, GBR, LTU, BLR, TUR, ROW]
+defaultPlayer: POL
+notes:
+  - "All figures are approximate end-2025 values compiled for the prototype from public sources (IMF WEO, World Bank, SIPRI, national statistics, official sites) and expert estimates. Each country file lists its sources. Values marked as estimates must be fact-checked before release."
+  - "Military orders of battle are aggregated to corps/division-level groupings and are estimates; classified dispositions are not represented."
+  - "The Russia–Ukraine line of contact is approximate (low confidence)."
+  - "Real-world organizations have more members than are simulated; non-simulated members are abstracted."

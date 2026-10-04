@@ -1,0 +1,146 @@
+id: USA
+name: United States
+adjective: American
+sources:
+  - "BEA / IMF WEO Oct 2025 (GDP ≈$30.5tn, growth ≈2%) — approximate"
+  - "BLS (unemployment ≈4.4%, CPI ≈2.9%) — approximate"
+  - "Federal Reserve (fed funds 3.50–3.75% after Dec 2025 cut) — verify"
+  - "House/Senate composition at start of 2026 (vacancies rounded) — approximate"
+  - "Tariff levels after 2025 trade deals and the Nov 2025 US–China truce — approximate averages"
+population: { total: 342000000, growthRate: 0.005, workingAgeShare: 0.64, over65Share: 0.18, livingStandard: 82, education: 80, healthcare: 70, poverty: 0.11 }
+economy:
+  currency: USD
+  fxRegime: float
+  gdpBn: 30500
+  potentialGrowth: 0.02
+  growth: 0.02
+  outputGap: 0.0
+  inflation: 0.029
+  inflationTarget: 0.02
+  unemployment: 0.044
+  naturalUnemployment: 0.042
+  policyRate: 0.036
+  neutralRealRate: 0.008
+  cbIndependence: 0.8
+  reserveCurrency: true
+  debtToGdp: 1.21
+  reservesBn: 240
+  treasuryCashBn: 800
+  riskPremium: 0.006
+  effectiveInterestRate: 0.034
+  revenue: { income: 0.11, corporate: 0.02, consumption: 0.045, social: 0.06, other: 0.06 }
+  taxRates: { incomeTop: 0.37, corporate: 0.21, vat: 0.0 }
+  spending: { defense: 0.031, social: 0.115, health: 0.085, education: 0.045, infrastructure: 0.02, administration: 0.022, other: 0.005 }
+  exportsBn: 2080
+  importsBn: 3300
+  commodityProduction: { oil: 13.6, gas: 1050, grain: 450 }
+  commodityConsumption: { oil: 20.5, gas: 900, grain: 330 }
+  energyImportDependence: 0.05
+energy: { productionTwh: 4500, consumptionTwh: 4300, nuclearGw: 97, renewablesGw: 400 }
+intelCapability: 0.95
+stateCapacity: 0.8
+corruption: 0.25
+techs: { advanced_semiconductors: 1, integrated_air_defense: 1, ai_military: 1, advanced_drones: 1 }
+government:
+  regimeType: presidential_republic
+  regimeLabel: "Federal presidential republic"
+  democracy: true
+  leader: USA-trump
+  headOfState: USA-trump
+  headOfGovernment: USA-trump
+  rulingParties: [REP]
+  parties:
+    - { id: REP, name: "Republican Party", short: GOP, economic: 0.5, social: 0.7, westward: 0.1, support: 0.46, leader: "Republican nominee" }
+    - { id: DEM, name: "Democratic Party", short: Dem, economic: -0.4, social: -0.5, westward: 0.8, support: 0.5, leader: "Democratic nominee" }
+    - { id: IND, name: "Independents & third parties", short: Ind, economic: 0.1, social: 0.0, westward: 0.3, support: 0.04 }
+  legislature:
+    name: Congress
+    chambers:
+      - { id: house, name: House of Representatives, total: 435, electoralSystem: fptp, seats: { REP: 220, DEM: 215 } }
+      - { id: senate, name: Senate, total: 100, electoralSystem: fptp, renewedFraction: 0.35, seats: { REP: 53, DEM: 47 } }
+  institutions:
+    - { kind: constitutional_court, name: "Supreme Court", independence: 0.65, loyalty: 0.45 }
+    - { kind: central_bank, name: "Federal Reserve", independence: 0.8, loyalty: 0.2 }
+    - { kind: military, name: "US Armed Forces", independence: 0.35, loyalty: 0.85 }
+    - { kind: security_services, name: "FBI / intelligence community", independence: 0.45, loyalty: 0.6 }
+    - { kind: bureaucracy, name: "Federal civil service", independence: 0.35, loyalty: 0.55 }
+    - { kind: media, name: "Free press", independence: 0.9, loyalty: 0.25 }
+  powerRules:
+    - { family: "trade.tariff", requires: [{ kind: executive_decree }], note: "IEEPA/Section 232 tariffs by executive order (subject to pending court challenges)" }
+    - { family: "sanctions.impose", requires: [{ kind: executive_decree }] }
+  blocs:
+    - { template: rural_conservatives, name: "Working-class & rural conservatives", size: 0.3, clout: 0.15, satisfaction: 65, stance: { westward: -0.1 } }
+    - { template: urban_professionals, name: "Suburban moderates & professionals", size: 0.25, clout: 0.15, satisfaction: 35 }
+    - { template: youth, name: "Young & progressive voters", size: 0.18, clout: 0.08, satisfaction: 20 }
+    - { template: minorities, name: "Minority working families", size: 0.17, clout: 0.07, satisfaction: 30 }
+    - { template: business_elite, size: 0.05, clout: 0.3, satisfaction: 55 }
+    - { template: security_establishment, size: 0.05, clout: 0.25, satisfaction: 50, stance: { westward: 0.7 } }
+  elections:
+    - { id: usa-house-2026, kind: midterm, date: "2026-11", chamberId: house, description: "midterm elections (House)", termYears: 2 }
+    - { id: usa-senate-2026, kind: midterm, date: "2026-11", chamberId: senate, description: "midterm elections (Senate class II)", termYears: 2 }
+    - { id: usa-pres-2028, kind: presidential, date: "2028-11", description: "presidential election", termYears: 4 }
+  laws: { conscription: none, pressFreedom: 0.8, retirementAge: 67, immigration: restrictive }
+  approval: 41
+  stability: 60
+  legitimacy: 65
+  eliteLoyalty: 60
+  militaryLoyalty: 80
+persons:
+  - id: USA-trump
+    name: Donald Trump
+    title: President
+    birthYear: 1946
+    partyId: REP
+    inOfficeSince: "2025-01"
+    personality: { riskTolerance: 0.7, agreeableness: 0.35, honesty: 0.3, ego: 0.95, pragmatism: 0.7, paranoia: 0.5 }
+    ideologyNote: "'America First': transactional, tariff-driven, skeptical of open-ended commitments; wants a quick Russia–Ukraine deal and much higher European defense spending."
+    speakingStyle: "Blunt, superlatives, talks about deals, strength and fairness; flatters friends, threatens tariffs; dislikes long briefings."
+    biography: "45th and 47th President of the United States; second term began January 2025."
+  - id: USA-vance
+    name: JD Vance
+    title: Vice President
+    birthYear: 1984
+    partyId: REP
+    personality: { riskTolerance: 0.55, agreeableness: 0.4, honesty: 0.5, ego: 0.6, pragmatism: 0.65, paranoia: 0.4 }
+    ideologyNote: "National-conservative; skeptical of aid to Ukraine."
+    speakingStyle: "Combative, populist."
+    biography: "Vice President since January 2025."
+military:
+  activePersonnel: 1320000
+  reserves: 800000
+  nuclear: true
+  stockpile: { mbt: 1500, ifv: 1500, artillery: 400, mlrs: 100, sam_long: 6, sam_short: 200, fighter: 150, drone: 500, cruise_missile: 2500 }
+  production: { mbt: 7, ifv: 15, artillery: 3, mlrs: 7, sam_long: 0.4, sam_short: 6, fighter: 9, attack_helicopter: 3, drone: 600, cruise_missile: 60, warship: 0.2, submarine: 0.12 }
+  munitions: 1200
+  munitionsProduction: 40
+  readinessBase: 0.8
+  doctrineQuality: 0.9
+  techLevel: 1.0
+units:
+  - { id: USA-VCORPS-PL, name: "V Corps forward elements & rotational ABCT (Poland)", kind: armored_brigade, personnel: 9000, location: POL-LUBUSKIE, hostedBy: POL, equipment: { mbt: 90, ifv: 130, artillery: 24, mlrs: 12, sam_short: 8 } }
+  - { id: USA-USAREUR, name: "US Army Europe (Germany)", kind: mechanized_division, personnel: 25000, location: DEU-BAVARIA, hostedBy: DEU, equipment: { mbt: 120, ifv: 250, artillery: 60, mlrs: 30, sam_long: 2, sam_short: 20 } }
+  - { id: USA-USAFE, name: "US Air Forces in Europe", domain: air, kind: tactical_air, personnel: 12000, location: DEU-RHINELAND-PALATINATE, hostedBy: DEU, equipment: { fighter: 130 } }
+  - { id: USA-LAKENHEATH, name: "48th Fighter Wing (UK)", domain: air, kind: tactical_air, personnel: 5000, location: GBR-EAST-OF-ENGLAND, hostedBy: GBR, equipment: { fighter: 70 } }
+  - { id: USA-XVIII, name: "XVIII Airborne Corps", kind: airborne_corps, personnel: 90000, location: USA-SOUTH, posture: reserve, equipment: { mbt: 150, ifv: 600, artillery: 180, mlrs: 80, attack_helicopter: 150, sam_short: 60 } }
+  - { id: USA-III, name: "III Armored Corps", kind: armored_corps, personnel: 120000, location: USA-SOUTH, posture: reserve, equipment: { mbt: 900, ifv: 1500, artillery: 300, mlrs: 120, attack_helicopter: 200, sam_long: 8, sam_short: 80 } }
+  - { id: USA-I, name: "I Corps (Indo-Pacific)", kind: army_corps, personnel: 80000, location: USA-WEST, posture: garrison, equipment: { mbt: 250, ifv: 800, artillery: 200, mlrs: 80, attack_helicopter: 150, sam_long: 6 } }
+  - { id: USA-NG, name: "Army National Guard & Reserve formations", kind: reserve_corps, personnel: 200000, location: USA-MIDWEST, posture: reserve, readiness: 0.55, equipment: { mbt: 600, ifv: 1200, artillery: 300, mlrs: 100, attack_helicopter: 200 } }
+  - { id: USA-USAF, name: "US Air Force & Navy/Marine aviation (CONUS)", domain: air, kind: tactical_air, personnel: 400000, location: USA-SOUTH, equipment: { fighter: 1900, drone: 600, sam_long: 30 } }
+  - { id: USA-NAVY-ATL, name: "US Atlantic Fleet", domain: naval, kind: fleet, personnel: 160000, location: USA-NORTHEAST, equipment: { warship: 55, submarine: 30, cruise_missile: 1500 } }
+  - { id: USA-NAVY-PAC, name: "US Pacific Fleet", domain: naval, kind: fleet, personnel: 200000, location: USA-WEST, equipment: { warship: 70, submarine: 36, cruise_missile: 2000 } }
+strategy:
+  objectives:
+    - { kind: great_power_status, weight: 1.0 }
+    - { kind: economic_growth, weight: 0.9 }
+    - { kind: deter_adversary, weight: 0.8, target: CHN }
+    - { kind: strategic_autonomy, weight: 0.6, note: "burden-shifting to allies" }
+    - { kind: alliance_cohesion, weight: 0.4 }
+    - { kind: re_election, weight: 0.6 }
+  postures: { CHN: rival, RUS: rival, UKR: partner, POL: ally, DEU: ally, FRA: ally, GBR: ally, LTU: ally, TUR: partner, BLR: neutral }
+  hiddenAgenda:
+    - "Secure a Russia–Ukraine ceasefire quickly, even on terms Kyiv dislikes, to pivot to China"
+    - "Pressure European allies to reach 5% of GDP on defense; reward the ones that do"
+    - "Use tariffs as leverage for trade and investment concessions"
+  redLines:
+    - { description: "Attacks on US forces", key: "attack_us_forces" }
+    - { description: "Use of nuclear weapons", key: "nuclear_use" }

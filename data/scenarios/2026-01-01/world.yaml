@@ -1,0 +1,294 @@
+# World-level starting state: organizations, treaties, wars, sanctions, relations, trade, markets.
+# Approximate values as of January 1, 2026 — see manifest notes.
+
+organizations:
+  - id: NATO
+    name: North Atlantic Treaty Organization
+    short: NATO
+    members: [USA, GBR, FRA, DEU, POL, LTU, TUR]
+    kind: military_alliance
+    decisionRule: consensus
+    collectiveDefense: true
+    applicants: [UKR]
+    description: "Collective defense alliance (Article 5). Non-simulated members are abstracted."
+  - id: EU
+    name: European Union
+    short: EU
+    members: [DEU, FRA, POL, LTU]
+    kind: economic_union
+    decisionRule: unanimity
+    applicants: [UKR, TUR]
+    description: "Single market and customs union; trade policy is an exclusive EU competence; sanctions require unanimity."
+  - id: UNSC
+    name: UN Security Council
+    short: UNSC
+    members: [USA, GBR, FRA, RUS, CHN]
+    kind: security_council
+    decisionRule: p5_veto
+    vetoMembers: [USA, GBR, FRA, RUS, CHN]
+    description: "Permanent members only are simulated; elected members are abstracted."
+  - id: CSTO
+    name: Collective Security Treaty Organization
+    short: CSTO
+    members: [RUS, BLR]
+    kind: military_alliance
+    decisionRule: consensus
+    collectiveDefense: true
+    description: "Russia-led security bloc (Central Asian members abstracted)."
+  - id: SCO
+    name: Shanghai Cooperation Organisation
+    short: SCO
+    members: [CHN, RUS, BLR]
+    kind: partnership
+    decisionRule: consensus
+    description: "Eurasian political, economic and security forum."
+
+agreements:
+  - { id: union-state, name: "Union State security guarantees treaty", parties: [RUS, BLR], signed: "2024-12", clauses: [{ type: MutualDefense }, { type: ForcePresence, from: BLR, to: RUS, text: "Russian forces and non-strategic nuclear weapons stationed in Belarus" }] }
+  - { id: rus-chn-treaty, name: "Russia–China Treaty of Good-Neighbourliness", parties: [RUS, CHN], signed: "2001-07", clauses: [{ type: NonAggression }, { type: Custom, text: "'No-limits' strategic partnership" }] }
+  - { id: usa-pol-edca, name: "US–Poland Enhanced Defense Cooperation Agreement", parties: [USA, POL], signed: "2020-08", clauses: [{ type: ForcePresence, from: POL, to: USA, text: "US forces stationed in Poland" }] }
+  - { id: deu-ltu-brigade, name: "German–Lithuanian brigade agreement", parties: [DEU, LTU], signed: "2023-12", clauses: [{ type: ForcePresence, from: LTU, to: DEU, text: "Permanent German brigade in Lithuania by 2027" }] }
+  - { id: gbr-ukr-100y, name: "UK–Ukraine 100-Year Partnership", parties: [GBR, UKR], signed: "2025-01", clauses: [{ type: MilitaryAid, from: GBR, to: UKR, amount: 0.35, months: 12, text: "Annual military support" }, { type: Custom, text: "Long-term security, energy and science cooperation" }] }
+  - { id: deu-ukr-support, name: "German–Ukrainian security agreement", parties: [DEU, UKR], signed: "2024-02", clauses: [{ type: MilitaryAid, from: DEU, to: UKR, amount: 0.75, months: 12 }, { type: Payment, from: DEU, to: UKR, amount: 0.5, months: 12, text: "Share of EU budget support (Ukraine Facility / ERA loans)" }] }
+  - { id: fra-ukr-support, name: "French–Ukrainian security agreement", parties: [FRA, UKR], signed: "2024-02", clauses: [{ type: MilitaryAid, from: FRA, to: UKR, amount: 0.15, months: 12 }, { type: Payment, from: FRA, to: UKR, amount: 0.35, months: 12, text: "Share of EU budget support" }] }
+  - { id: pol-ukr-support, name: "Polish–Ukrainian security agreement", parties: [POL, UKR], signed: "2024-07", clauses: [{ type: MilitaryAid, from: POL, to: UKR, amount: 0.05, months: 12 }, { type: Payment, from: POL, to: UKR, amount: 0.1, months: 12, text: "Share of EU budget support" }] }
+  - { id: ltu-ukr-support, name: "Lithuanian–Ukrainian security agreement", parties: [LTU, UKR], signed: "2024-07", clauses: [{ type: MilitaryAid, from: LTU, to: UKR, amount: 0.02, months: 12 }] }
+  - { id: row-ukr-support, name: "International support for Ukraine (non-simulated donors, IMF, G7 ERA loans)", parties: [ROW, UKR], signed: "2025-01", clauses: [{ type: Payment, from: ROW, to: UKR, amount: 1.5, months: 12 }, { type: MilitaryAid, from: ROW, to: UKR, amount: 0.6, months: 12, text: "Nordic, Dutch, Canadian aid and PURL purchases of US weapons" }] }
+  - { id: usa-ukr-minerals, name: "US–Ukraine Reconstruction Investment Fund", parties: [USA, UKR], signed: "2025-04", clauses: [{ type: Custom, text: "Joint fund for Ukrainian mineral and energy projects" }] }
+
+wars:
+  - id: war-rus-ukr
+    name: Russo-Ukrainian War
+    attackers: [RUS]
+    defenders: [UKR]
+    start: "2022-02"
+    warSupport: { RUS: 62, UKR: 72 }
+    casualties: { RUS: 1100000, UKR: 450000 }
+    goals:
+      RUS: "Capture all of Donetsk, Luhansk, Zaporizhzhia and Kherson oblasts; force Ukrainian neutrality"
+      UKR: "Restore territorial integrity; secure lasting security guarantees"
+    baseIntensity: 0.45
+
+operations:
+  - { id: op-rus-donetsk, country: RUS, warId: war-rus-ukr, type: offensive, units: [RUS-GF-CEN, RUS-GF-SOU], objectives: [UKR-DONETSK], intensity: full, axisNote: "Pokrovsk–Kostiantynivka toward Kramatorsk–Sloviansk" }
+  - { id: op-rus-zaporizhzhia, country: RUS, warId: war-rus-ukr, type: offensive, units: [RUS-GF-EAS], objectives: [UKR-ZAPORIZHZHIA], intensity: limited, axisNote: "Huliaipole–Orikhiv" }
+  - { id: op-rus-kharkiv, country: RUS, warId: war-rus-ukr, type: offensive, units: [RUS-GF-WES], objectives: [UKR-KHARKIV], intensity: probing, axisNote: "Kupiansk" }
+  - { id: op-rus-strikes, country: RUS, warId: war-rus-ukr, type: strategic_strikes, objectives: [UKR-KYIV-CITY, UKR-KHARKIV, UKR-ODESA, UKR-DNIPROPETROVSK, UKR-LVIV], intensity: full, axisNote: "Winter campaign against the power grid" }
+  - { id: op-ukr-strikes, country: UKR, warId: war-rus-ukr, type: strategic_strikes, objectives: [RUS-VOLGA, RUS-KRASNODAR, RUS-ROSTOV, RUS-BELGOROD], intensity: limited, axisNote: "Long-range drone strikes on oil refineries and logistics" }
+
+sanctions:
+  - { id: s-eu-rus, imposers: [POL, DEU, FRA, LTU], target: RUS, severity: 0.75, label: "EU sanctions on Russia (19 packages)", orgId: EU }
+  - { id: s-usa-rus, imposers: [USA], target: RUS, severity: 0.7, label: "US sanctions on Russia (incl. Rosneft & Lukoil, Oct 2025)" }
+  - { id: s-gbr-rus, imposers: [GBR], target: RUS, severity: 0.75, label: "UK sanctions on Russia" }
+  - { id: s-eu-blr, imposers: [POL, DEU, FRA, LTU], target: BLR, severity: 0.6, label: "EU sanctions on Belarus", orgId: EU }
+  - { id: s-usa-blr, imposers: [USA], target: BLR, severity: 0.35, label: "US sanctions on Belarus (partially eased in 2025)" }
+  - { id: s-gbr-blr, imposers: [GBR], target: BLR, severity: 0.5, label: "UK sanctions on Belarus" }
+  - { id: s-rus-pol, imposers: [RUS], target: POL, severity: 0.3, label: "Russian counter-sanctions" }
+  - { id: s-rus-ltu, imposers: [RUS], target: LTU, severity: 0.3, label: "Russian counter-sanctions" }
+  - { id: s-rus-deu, imposers: [RUS], target: DEU, severity: 0.25, label: "Russian counter-sanctions" }
+  - { id: s-rus-fra, imposers: [RUS], target: FRA, severity: 0.25, label: "Russian counter-sanctions" }
+  - { id: s-rus-gbr, imposers: [RUS], target: GBR, severity: 0.3, label: "Russian counter-sanctions" }
+  - { id: s-rus-usa, imposers: [RUS], target: USA, severity: 0.2, label: "Russian counter-sanctions" }
+  - { id: s-usa-chn, imposers: [USA], target: CHN, severity: 0.15, label: "US export controls on advanced technology" }
+  - { id: s-chn-usa, imposers: [CHN], target: USA, severity: 0.08, label: "Chinese rare-earth export controls (partly suspended)" }
+
+claims:
+  - { by: RUS, kind: annexed_unrecognized, provinces: [UKR-CRIMEA, UKR-SEVASTOPOL, UKR-LUHANSK, UKR-DONETSK, UKR-DONETSK-OCC, UKR-ZAPORIZHZHIA, UKR-ZAPORIZHZHIA-OCC, UKR-KHERSON, UKR-KHERSON-OCC] }
+
+relations:
+  - { from: POL, to: RUS, opinion: -80, trust: 0.05, threat: 0.6 }
+  - { from: RUS, to: POL, opinion: -70, trust: 0.1, threat: 0.25 }
+  - { from: POL, to: BLR, opinion: -55, trust: 0.15, threat: 0.35 }
+  - { from: BLR, to: POL, opinion: -45, trust: 0.2, threat: 0.3 }
+  - { from: POL, to: UKR, opinion: 35, trust: 0.55 }
+  - { from: UKR, to: POL, opinion: 50, trust: 0.6 }
+  - { from: POL, to: USA, opinion: 70, trust: 0.6 }
+  - { from: USA, to: POL, opinion: 55, trust: 0.65 }
+  - { from: POL, to: DEU, opinion: 35, trust: 0.55 }
+  - { from: DEU, to: POL, opinion: 45, trust: 0.6 }
+  - { from: POL, to: LTU, opinion: 70, trust: 0.75, mutual: true }
+  - { from: POL, to: FRA, opinion: 45, trust: 0.55 }
+  - { from: POL, to: GBR, opinion: 55, trust: 0.65 }
+  - { from: LTU, to: RUS, opinion: -85, trust: 0.03, threat: 0.65 }
+  - { from: RUS, to: LTU, opinion: -70, trust: 0.1, threat: 0.15 }
+  - { from: LTU, to: BLR, opinion: -70, trust: 0.1, threat: 0.45 }
+  - { from: BLR, to: LTU, opinion: -50, trust: 0.15, threat: 0.25 }
+  - { from: LTU, to: UKR, opinion: 75, trust: 0.7 }
+  - { from: LTU, to: USA, opinion: 70, trust: 0.6 }
+  - { from: LTU, to: DEU, opinion: 75, trust: 0.75 }
+  - { from: LTU, to: CHN, opinion: -40, trust: 0.2, mutual: true }
+  - { from: UKR, to: RUS, opinion: -95, trust: 0.0, threat: 0.95 }
+  - { from: RUS, to: UKR, opinion: -90, trust: 0.0, threat: 0.45 }
+  - { from: UKR, to: USA, opinion: 30, trust: 0.4 }
+  - { from: USA, to: UKR, opinion: 15, trust: 0.45 }
+  - { from: UKR, to: GBR, opinion: 70, trust: 0.75 }
+  - { from: UKR, to: DEU, opinion: 60, trust: 0.65 }
+  - { from: UKR, to: FRA, opinion: 60, trust: 0.65 }
+  - { from: UKR, to: TUR, opinion: 25, trust: 0.45 }
+  - { from: UKR, to: CHN, opinion: -15, trust: 0.2 }
+  - { from: UKR, to: BLR, opinion: -50, trust: 0.1, threat: 0.3 }
+  - { from: RUS, to: USA, opinion: -40, trust: 0.15, threat: 0.4 }
+  - { from: USA, to: RUS, opinion: -20, trust: 0.15, threat: 0.3 }
+  - { from: RUS, to: CHN, opinion: 55, trust: 0.55 }
+  - { from: CHN, to: RUS, opinion: 45, trust: 0.5 }
+  - { from: RUS, to: BLR, opinion: 60, trust: 0.6, mutual: true }
+  - { from: RUS, to: TUR, opinion: 20, trust: 0.35 }
+  - { from: TUR, to: RUS, opinion: 15, trust: 0.3, threat: 0.15 }
+  - { from: RUS, to: GBR, opinion: -75, trust: 0.05, threat: 0.25 }
+  - { from: RUS, to: DEU, opinion: -60, trust: 0.1, threat: 0.2 }
+  - { from: RUS, to: FRA, opinion: -60, trust: 0.1, threat: 0.2 }
+  - { from: USA, to: CHN, opinion: -45, trust: 0.2, threat: 0.35 }
+  - { from: CHN, to: USA, opinion: -50, trust: 0.15, threat: 0.4 }
+  - { from: USA, to: DEU, opinion: 35, trust: 0.55 }
+  - { from: USA, to: FRA, opinion: 30, trust: 0.5 }
+  - { from: USA, to: GBR, opinion: 50, trust: 0.65 }
+  - { from: USA, to: LTU, opinion: 40, trust: 0.6 }
+  - { from: USA, to: TUR, opinion: 25, trust: 0.4 }
+  - { from: USA, to: BLR, opinion: -15, trust: 0.15 }
+  - { from: DEU, to: USA, opinion: 40, trust: 0.5 }
+  - { from: FRA, to: USA, opinion: 30, trust: 0.45 }
+  - { from: GBR, to: USA, opinion: 55, trust: 0.6 }
+  - { from: TUR, to: USA, opinion: 20, trust: 0.35 }
+  - { from: CHN, to: DEU, opinion: 25, trust: 0.4 }
+  - { from: DEU, to: CHN, opinion: -10, trust: 0.3 }
+  - { from: TUR, to: UKR, opinion: 20, trust: 0.4 }
+  - { from: BLR, to: UKR, opinion: -40, trust: 0.1 }
+  - { from: BLR, to: USA, opinion: 0, trust: 0.2 }
+  - { from: DEU, to: RUS, opinion: -60, trust: 0.05, threat: 0.35 }
+  - { from: FRA, to: RUS, opinion: -60, trust: 0.05, threat: 0.25 }
+  - { from: GBR, to: RUS, opinion: -75, trust: 0.03, threat: 0.3 }
+
+trade:
+  flows:
+    - [USA, CHN, 145]
+    - [CHN, USA, 330]
+    - [USA, DEU, 80]
+    - [DEU, USA, 165]
+    - [USA, GBR, 75]
+    - [GBR, USA, 65]
+    - [USA, FRA, 45]
+    - [FRA, USA, 55]
+    - [USA, POL, 15]
+    - [POL, USA, 14]
+    - [USA, TUR, 15]
+    - [TUR, USA, 17]
+    - [USA, UKR, 3]
+    - [UKR, USA, 1]
+    - [USA, LTU, 1.5]
+    - [LTU, USA, 2]
+    - [RUS, USA, 3]
+    - [USA, RUS, 0.5]
+    - [CHN, DEU, 105]
+    - [DEU, CHN, 90]
+    - [CHN, FRA, 50]
+    - [FRA, CHN, 30]
+    - [CHN, GBR, 80]
+    - [GBR, CHN, 28]
+    - [CHN, POL, 45]
+    - [POL, CHN, 4]
+    - [CHN, RUS, 110]
+    - [RUS, CHN, 125]
+    - [CHN, TUR, 40]
+    - [TUR, CHN, 4]
+    - [CHN, UKR, 12]
+    - [UKR, CHN, 2]
+    - [CHN, BLR, 6]
+    - [BLR, CHN, 2]
+    - [CHN, LTU, 2]
+    - [LTU, CHN, 0.3]
+    - [DEU, FRA, 130]
+    - [FRA, DEU, 95]
+    - [DEU, POL, 100]
+    - [POL, DEU, 110]
+    - [DEU, GBR, 90]
+    - [GBR, DEU, 45]
+    - [DEU, TUR, 25]
+    - [TUR, DEU, 22]
+    - [DEU, RUS, 8]
+    - [RUS, DEU, 2]
+    - [DEU, UKR, 8]
+    - [UKR, DEU, 3]
+    - [DEU, LTU, 5]
+    - [LTU, DEU, 4]
+    - [FRA, GBR, 40]
+    - [GBR, FRA, 30]
+    - [FRA, POL, 15]
+    - [POL, FRA, 22]
+    - [FRA, TUR, 10]
+    - [TUR, FRA, 10]
+    - [FRA, UKR, 2]
+    - [UKR, FRA, 1]
+    - [RUS, FRA, 4]
+    - [FRA, RUS, 2]
+    - [GBR, POL, 8]
+    - [POL, GBR, 18]
+    - [GBR, TUR, 8]
+    - [TUR, GBR, 13]
+    - [POL, UKR, 13]
+    - [UKR, POL, 7]
+    - [POL, LTU, 7]
+    - [LTU, POL, 6]
+    - [POL, BLR, 1.5]
+    - [BLR, POL, 1]
+    - [POL, RUS, 1]
+    - [RUS, POL, 1]
+    - [POL, TUR, 4]
+    - [TUR, POL, 4]
+    - [RUS, TUR, 45]
+    - [TUR, RUS, 10]
+    - [RUS, BLR, 25]
+    - [BLR, RUS, 25]
+    - [LTU, BLR, 0.3]
+    - [BLR, LTU, 0.3]
+    - [LTU, UKR, 1]
+    - [UKR, LTU, 0.5]
+    - [UKR, TUR, 3]
+    - [TUR, UKR, 3]
+  tariffs:
+    # [importer, exporter, additional tariff]
+    - [USA, CHN, 0.45]
+    - [CHN, USA, 0.3]
+    - [USA, DEU, 0.15]
+    - [USA, FRA, 0.15]
+    - [USA, POL, 0.15]
+    - [USA, LTU, 0.15]
+    - [USA, GBR, 0.1]
+    - [USA, TUR, 0.15]
+    - [USA, UKR, 0.1]
+    - [USA, ROW, 0.15]
+    - [DEU, USA, 0.02]
+    - [FRA, USA, 0.02]
+    - [POL, USA, 0.02]
+    - [LTU, USA, 0.02]
+    - [GBR, USA, 0.03]
+    - [DEU, CHN, 0.05]
+    - [FRA, CHN, 0.05]
+    - [POL, CHN, 0.05]
+    - [LTU, CHN, 0.05]
+    - [ROW, USA, 0.05]
+
+# Province pairs separated by the Dnipro river / Kerch strait (attacks across them are much harder).
+barriers:
+  - [UKR-KHERSON, UKR-KHERSON-OCC]
+  - [UKR-ZAPORIZHZHIA, UKR-KHERSON-OCC]
+  - [UKR-DNIPROPETROVSK, UKR-ZAPORIZHZHIA-OCC]
+  - [UKR-CRIMEA, RUS-KRASNODAR]
+  - [UKR-MYKOLAIV, UKR-KHERSON-OCC]
+  - [UKR-DNIPROPETROVSK, UKR-KHERSON-OCC]
+
+markets:
+  - { id: oil, name: "Brent crude", unit: "$/bbl", price: 62, baseSupply: 104 }
+  - { id: gas, name: "European gas (TTF)", unit: "€/MWh", price: 30, baseSupply: 4200 }
+  - { id: grain, name: "Wheat", unit: "$/t", price: 230, baseSupply: 2700 }
+
+history:
+  - { date: "2014-03", type: annexation, actors: [RUS, UKR], summary: "Russia annexed Crimea (unrecognized internationally)." }
+  - { date: "2022-02", type: war_started, actors: [RUS, UKR], summary: "Russia launched a full-scale invasion of Ukraine." }
+  - { date: "2022-09", type: annexation, actors: [RUS, UKR], summary: "Russia declared the annexation of four partially occupied Ukrainian oblasts (unrecognized)." }
+  - { date: "2025-01", type: background, actors: [USA], summary: "Donald Trump began his second term as US President." }
+  - { date: "2025-04", type: treaty, actors: [USA, UKR], summary: "The US and Ukraine signed a minerals and reconstruction investment fund agreement." }
+  - { date: "2025-06", type: background, actors: [USA, GBR, FRA, DEU, POL, LTU, TUR], summary: "NATO allies agreed a target of 5% of GDP for defense and security by 2035." }
+  - { date: "2025-08", type: background, actors: [POL], summary: "Karol Nawrocki was inaugurated as President of Poland." }
+  - { date: "2025-09", type: incident, actors: [RUS, POL], summary: "Russian drones entered Polish airspace and were shot down; NATO held Article 4 consultations." }
+  - { date: "2025-11", type: background, actors: [USA, CHN], summary: "The US and China agreed a one-year trade truce reducing some tariffs and export controls." }
+  - { date: "2025-11", type: diplomacy, actors: [USA, RUS, UKR], summary: "US-brokered peace proposals for the Russia–Ukraine war were negotiated without agreement." }

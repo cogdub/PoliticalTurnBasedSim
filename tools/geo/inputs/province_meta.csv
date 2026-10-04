@@ -1,0 +1,235 @@
+id,name,country,sources,terrain,population,urbanShare,incomeIndex,isCapital
+POL-MAZOWIECKIE,Masovian,POL,iso:PL-MZ,plains,5520,0.64,1.60,true
+POL-SLASKIE,Silesian,POL,iso:PL-SL,hills,4320,0.76,1.00,false
+POL-WIELKOPOLSKIE,Greater Poland,POL,iso:PL-WP,plains,3480,0.54,1.05,false
+POL-MALOPOLSKIE,Lesser Poland,POL,iso:PL-MA,hills,3430,0.48,0.92,false
+POL-DOLNOSLASKIE,Lower Silesian,POL,iso:PL-DS,hills,2870,0.68,1.08,false
+POL-LODZKIE,Łódź,POL,iso:PL-LD,plains,2370,0.62,0.92,false
+POL-POMORSKIE,Pomeranian,POL,iso:PL-PM,plains,2350,0.64,0.98,false
+POL-PODKARPACKIE,Subcarpathian,POL,iso:PL-PK,hills,2060,0.41,0.70,false
+POL-LUBELSKIE,Lublin,POL,iso:PL-LU,plains,2000,0.46,0.68,false
+POL-KUJAWSKO-POMORSKIE,Kuyavian-Pomeranian,POL,iso:PL-KP,plains,1990,0.58,0.82,false
+POL-ZACHODNIOPOMORSKIE,West Pomeranian,POL,iso:PL-ZP,plains,1640,0.68,0.85,false
+POL-WARMINSKO-MAZURSKIE,Warmian-Masurian,POL,iso:PL-WN,forest,1360,0.59,0.68,false
+POL-PODLASKIE,Podlaskie,POL,iso:PL-PD,forest,1160,0.60,0.70,false
+POL-SWIETOKRZYSKIE,Świętokrzyskie,POL,iso:PL-SK,hills,1180,0.44,0.70,false
+POL-LUBUSKIE,Lubusz,POL,iso:PL-LB,forest,980,0.64,0.82,false
+POL-OPOLSKIE,Opole,POL,iso:PL-OP,plains,950,0.52,0.80,false
+DEU-NORTH-RHINE-WESTPHALIA,North Rhine-Westphalia,DEU,iso:DE-NW,plains,18140,0.80,0.97,false
+DEU-BAVARIA,Bavaria,DEU,iso:DE-BY,hills,13440,0.60,1.15,false
+DEU-BADEN-WURTTEMBERG,Baden-Württemberg,DEU,iso:DE-BW,hills,11280,0.64,1.10,false
+DEU-LOWER-SAXONY,Lower Saxony,DEU,iso:DE-NI,plains,8140,0.58,0.92,false
+DEU-HESSE,Hesse,DEU,iso:DE-HE,hills,6390,0.70,1.10,false
+DEU-SAXONY,Saxony,DEU,iso:DE-SN,hills,4040,0.67,0.80,false
+DEU-RHINELAND-PALATINATE,Rhineland-Palatinate,DEU,iso:DE-RP,hills,4160,0.55,0.88,false
+DEU-BERLIN,Berlin,DEU,iso:DE-BE,urban,3880,1.00,1.10,true
+DEU-SCHLESWIG-HOLSTEIN,Schleswig-Holstein,DEU,iso:DE-SH,plains,2960,0.60,0.83,false
+DEU-BRANDENBURG,Brandenburg,DEU,iso:DE-BB,plains,2580,0.52,0.78,false
+DEU-SAXONY-ANHALT,Saxony-Anhalt,DEU,iso:DE-ST,plains,2150,0.58,0.75,false
+DEU-THURINGIA,Thuringia,DEU,iso:DE-TH,forest,2110,0.55,0.75,false
+DEU-HAMBURG,Hamburg,DEU,iso:DE-HH,urban,1900,1.00,1.65,false
+DEU-MECKLENBURG-VORPOMMERN,Mecklenburg-Western Pomerania,DEU,iso:DE-MV,plains,1630,0.52,0.73,false
+DEU-SAARLAND,Saarland,DEU,iso:DE-SL,hills,990,0.68,0.86,false
+DEU-BREMEN,Bremen,DEU,iso:DE-HB,urban,690,0.98,1.10,false
+FRA-ILE-DE-FRANCE,Île-de-France,FRA,f:FRA:region=Île-de-France,urban,12420,0.98,1.66,true
+FRA-AUVERGNE-RHONE-ALPES,Auvergne-Rhône-Alpes,FRA,f:FRA:region=Auvergne-Rhône-Alpes,mountains,8200,0.78,0.98,false
+FRA-NOUVELLE-AQUITAINE,Nouvelle-Aquitaine,FRA,f:FRA:region=Nouvelle-Aquitaine,plains,6150,0.67,0.85,false
+FRA-OCCITANIE,Occitanie,FRA,f:FRA:region=Occitanie,hills,6100,0.75,0.84,false
+FRA-HAUTS-DE-FRANCE,Hauts-de-France,FRA,f:FRA:region=Hauts-de-France,plains,5980,0.80,0.80,false
+FRA-GRAND-EST,Grand Est,FRA,f:FRA:region=Grand Est,plains,5570,0.74,0.83,false
+FRA-PROVENCE-ALPES-COTE-DAZUR,Provence-Alpes-Côte d'Azur,FRA,f:FRA:region=Provence-Alpes-Côte-d'Azur,mountains,5180,0.92,0.94,false
+FRA-PAYS-DE-LA-LOIRE,Pays de la Loire,FRA,f:FRA:region=Pays de la Loire,plains,3940,0.70,0.89,false
+FRA-BRITTANY,Brittany,FRA,f:FRA:region=Bretagne,plains,3450,0.66,0.86,false
+FRA-NORMANDY,Normandy,FRA,f:FRA:region=Normandie,plains,3330,0.70,0.85,false
+FRA-BOURGOGNE-FRANCHE-COMTE,Bourgogne-Franche-Comté,FRA,f:FRA:region=Bourgogne-Franche-Comté,hills,2790,0.65,0.81,false
+FRA-CENTRE-VAL-DE-LOIRE,Centre-Val de Loire,FRA,f:FRA:region=Centre-Val de Loire,plains,2570,0.67,0.85,false
+FRA-CORSICA,Corsica,FRA,f:FRA:region=Corse,mountains,355,0.55,0.82,false
+GBR-LONDON,London,GBR,f:GBR:geonunit=England&region=Greater London,urban,9090,1.00,1.75,true
+GBR-SOUTH-EAST,South East England,GBR,f:GBR:geonunit=England&region=South East,hills,9480,0.80,1.05,false
+GBR-NORTH-WEST,North West England,GBR,f:GBR:geonunit=England&region=North West,hills,7600,0.88,0.88,false
+GBR-EAST-OF-ENGLAND,East of England,GBR,f:GBR:geonunit=England&region=East,plains,6500,0.75,0.92,false
+GBR-WEST-MIDLANDS,West Midlands,GBR,f:GBR:geonunit=England&region=West Midlands,plains,6100,0.85,0.83,false
+GBR-SOUTH-WEST,South West England,GBR,f:GBR:geonunit=England&region=South West,hills,5850,0.68,0.88,false
+GBR-YORKSHIRE-AND-THE-HUMBER,Yorkshire and the Humber,GBR,f:GBR:geonunit=England&region=Yorkshire and the Humber,hills,5600,0.85,0.80,false
+GBR-EAST-MIDLANDS,East Midlands,GBR,f:GBR:geonunit=England&region=East Midlands,plains,5000,0.76,0.80,false
+GBR-NORTH-EAST,North East England,GBR,f:GBR:geonunit=England&region=North East,hills,2700,0.85,0.74,false
+GBR-SCOTLAND,Scotland,GBR,f:GBR:geonunit=Scotland,mountains,5500,0.83,0.92,false
+GBR-WALES,Wales,GBR,f:GBR:geonunit=Wales,hills,3180,0.67,0.73,false
+GBR-NORTHERN-IRELAND,Northern Ireland,GBR,f:GBR:geonunit=Northern Ireland,hills,1920,0.65,0.78,false
+USA-NORTHEAST,Northeast,USA,f:USA:region=Northeast,hills,57800,0.85,1.15,false
+USA-MIDWEST,Midwest,USA,f:USA:region=Midwest,plains,69600,0.75,0.95,false
+USA-SOUTH,South,USA,f:USA:region=South,plains,132700,0.76,0.92,true
+USA-WEST,West,USA,f:USA:region=West,mountains,80000,0.90,1.08,false
+CHN-NORTH,North China,CHN,iso:CN-BJ;iso:CN-TJ;iso:CN-HE;iso:CN-SX;iso:CN-NM,plains,167670,0.66,0.95,true
+CHN-NORTHEAST,Northeast China,CHN,iso:CN-LN;iso:CN-JL;iso:CN-HL,plains,95100,0.68,0.70,false
+CHN-EAST,East China,CHN,iso:CN-SH;iso:CN-JS;iso:CN-ZJ;iso:CN-AH;iso:CN-FJ;iso:CN-JX;iso:CN-SD,plains,425900,0.72,1.30,false
+CHN-CENTRAL,Central China,CHN,iso:CN-HA;iso:CN-HB;iso:CN-HN,plains,221600,0.62,0.85,false
+CHN-SOUTH,South China,CHN,iso:CN-GD;iso:CN-GX;iso:CN-HI;adm0:HKG;adm0:MAC,hills,188600,0.70,1.00,false
+CHN-SOUTHWEST,Southwest China,CHN,iso:CN-CQ;iso:CN-SC;iso:CN-GZ;iso:CN-YN;iso:CN-XZ,mountains,204400,0.58,0.75,false
+CHN-NORTHWEST,Northwest China,CHN,iso:CN-SN;iso:CN-GS;iso:CN-QH;iso:CN-NX;iso:CN-XJ,desert,103500,0.62,0.80,false
+LTU-VILNIUS,Vilnius,LTU,iso:LT-VL,plains,850,0.80,1.40,true
+LTU-KAUNAS,Kaunas,LTU,iso:LT-KU,plains,570,0.72,0.98,false
+LTU-KLAIPEDA,Klaipėda,LTU,iso:LT-KL,plains,340,0.73,0.98,false
+LTU-SIAULIAI,Šiauliai,LTU,iso:LT-SA,plains,255,0.62,0.68,false
+LTU-PANEVEZYS,Panevėžys,LTU,iso:LT-PN,plains,215,0.58,0.70,false
+LTU-ALYTUS,Alytus,LTU,iso:LT-AL,forest,135,0.55,0.58,false
+LTU-MARIJAMPOLE,Marijampolė,LTU,iso:LT-MR,plains,140,0.45,0.55,false
+LTU-UTENA,Utena,LTU,iso:LT-UT,forest,125,0.55,0.58,false
+LTU-TELSIAI,Telšiai,LTU,iso:LT-TE,plains,130,0.45,0.62,false
+LTU-TAURAGE,Tauragė,LTU,iso:LT-TA,plains,92,0.42,0.52,false
+BLR-MINSK-CITY,Minsk (city),BLR,iso:BY-HM,urban,2000,1.00,1.60,true
+BLR-MINSK,Minsk Region,BLR,iso:BY-MI,plains,1540,0.45,1.10,false
+BLR-BREST,Brest,BLR,iso:BY-BR,marsh,1310,0.65,0.80,false
+BLR-GOMEL,Gomel,BLR,iso:BY-HO,marsh,1330,0.76,0.80,false
+BLR-GRODNO,Grodno,BLR,iso:BY-HR,plains,1000,0.70,0.85,false
+BLR-MOGILEV,Mogilev,BLR,iso:BY-MA,plains,950,0.78,0.75,false
+BLR-VITEBSK,Vitebsk,BLR,iso:BY-VI,forest,1070,0.78,0.72,false
+UKR-KYIV-CITY,Kyiv (city),UKR,iso:UA-30,urban,3000,1.00,2.80,true
+UKR-KYIV,Kyiv Oblast,UKR,iso:UA-32,forest,1800,0.62,1.15,false
+UKR-KHARKIV,Kharkiv,UKR,iso:UA-63,steppe,2250,0.81,0.95,false
+UKR-DNIPROPETROVSK,Dnipropetrovsk,UKR,iso:UA-12,steppe,3000,0.84,1.30,false
+UKR-ODESA,Odesa,UKR,iso:UA-51,steppe,2250,0.67,0.90,false
+UKR-LVIV,Lviv,UKR,iso:UA-46,hills,2450,0.61,0.90,false
+UKR-ZAPORIZHZHIA,Zaporizhzhia,UKR,free:UA-23,steppe,880,0.85,1.00,false
+UKR-ZAPORIZHZHIA-OCC,Zaporizhzhia (occupied),UKR,occ:UA-23,steppe,280,0.60,0.55,false
+UKR-DONETSK,Donetsk,UKR,free:UA-14,steppe,250,0.85,0.60,false
+UKR-DONETSK-OCC,Donetsk (occupied),UKR,occ:UA-14,steppe,950,0.91,0.45,false
+UKR-KHERSON,Kherson,UKR,free:UA-65,steppe,160,0.75,0.55,false
+UKR-KHERSON-OCC,Kherson (occupied),UKR,occ:UA-65,steppe,120,0.45,0.45,false
+UKR-LUHANSK,Luhansk,UKR,iso:UA-09,steppe,1250,0.87,0.40,false
+UKR-CRIMEA,Crimea,UKR,iso:UA-43,hills,1900,0.51,0.70,false
+UKR-SEVASTOPOL,Sevastopol,UKR,iso:UA-40,urban,500,0.93,0.80,false
+UKR-MYKOLAIV,Mykolaiv,UKR,iso:UA-48,steppe,860,0.68,0.85,false
+UKR-VINNYTSIA,Vinnytsia,UKR,iso:UA-05,plains,1480,0.51,0.85,false
+UKR-POLTAVA,Poltava,UKR,iso:UA-53,plains,1350,0.62,1.20,false
+UKR-CHERKASY,Cherkasy,UKR,iso:UA-71,plains,1130,0.57,0.85,false
+UKR-CHERNIHIV,Chernihiv,UKR,iso:UA-74,forest,890,0.65,0.75,false
+UKR-SUMY,Sumy,UKR,iso:UA-59,plains,950,0.69,0.70,false
+UKR-ZHYTOMYR,Zhytomyr,UKR,iso:UA-18,forest,1150,0.59,0.70,false
+UKR-RIVNE,Rivne,UKR,iso:UA-56,marsh,1140,0.48,0.65,false
+UKR-VOLYN,Volyn,UKR,iso:UA-07,marsh,1010,0.52,0.65,false
+UKR-TERNOPIL,Ternopil,UKR,iso:UA-61,plains,1000,0.46,0.55,false
+UKR-KHMELNYTSKYI,Khmelnytskyi,UKR,iso:UA-68,plains,1220,0.57,0.70,false
+UKR-IVANO-FRANKIVSK,Ivano-Frankivsk,UKR,iso:UA-26,mountains,1350,0.44,0.70,false
+UKR-ZAKARPATTIA,Zakarpattia,UKR,iso:UA-21,mountains,1250,0.37,0.50,false
+UKR-CHERNIVTSI,Chernivtsi,UKR,iso:UA-77,hills,900,0.43,0.50,false
+UKR-KIROVOHRAD,Kirovohrad,UKR,iso:UA-35,steppe,830,0.64,0.85,false
+RUS-MOSCOW-CITY,Moscow (city),RUS,adm1:RUS-2365,urban,13150,0.99,2.40,true
+RUS-MOSCOW,Moscow Oblast,RUS,adm1:RUS-2364,plains,8600,0.82,1.10,false
+RUS-ST-PETERSBURG,Saint Petersburg,RUS,iso:RU-SPE,urban,5600,1.00,1.55,false
+RUS-LENINGRAD,Leningrad Oblast,RUS,iso:RU-LEN,forest,2050,0.66,1.10,false
+RUS-ARKHANGELSK,Arkhangelsk,RUS,iso:RU-ARK,forest,960,0.79,0.85,false
+RUS-NENETS,Nenets,RUS,iso:RU-NEN,marsh,41,0.73,4.50,false
+RUS-VOLOGDA,Vologda,RUS,iso:RU-VLG,forest,1120,0.73,0.95,false
+RUS-KALININGRAD,Kaliningrad,RUS,iso:RU-KGD,plains,1030,0.78,0.85,false
+RUS-KARELIA,Karelia,RUS,iso:RU-KR,forest,520,0.82,0.80,false
+RUS-KOMI,Komi,RUS,iso:RU-KO,forest,710,0.79,1.15,false
+RUS-MURMANSK,Murmansk,RUS,iso:RU-MUR,forest,650,0.92,1.35,false
+RUS-NOVGOROD,Novgorod,RUS,iso:RU-NGR,forest,570,0.72,0.75,false
+RUS-PSKOV,Pskov,RUS,iso:RU-PSK,forest,570,0.71,0.55,false
+RUS-BELGOROD,Belgorod,RUS,iso:RU-BEL,steppe,1500,0.67,0.95,false
+RUS-BRYANSK,Bryansk,RUS,iso:RU-BRY,forest,1150,0.71,0.60,false
+RUS-VLADIMIR,Vladimir,RUS,iso:RU-VLA,forest,1330,0.78,0.65,false
+RUS-VORONEZH,Voronezh,RUS,iso:RU-VOR,steppe,2280,0.68,0.75,false
+RUS-IVANOVO,Ivanovo,RUS,iso:RU-IVA,forest,910,0.82,0.50,false
+RUS-KALUGA,Kaluga,RUS,iso:RU-KLU,forest,1060,0.73,0.85,false
+RUS-KOSTROMA,Kostroma,RUS,iso:RU-KOS,forest,570,0.73,0.60,false
+RUS-KURSK,Kursk,RUS,iso:RU-KRS,plains,1060,0.69,0.80,false
+RUS-LIPETSK,Lipetsk,RUS,iso:RU-LIP,plains,1130,0.65,0.95,false
+RUS-ORYOL,Oryol,RUS,iso:RU-ORL,plains,690,0.67,0.60,false
+RUS-RYAZAN,Ryazan,RUS,iso:RU-RYA,plains,1080,0.72,0.65,false
+RUS-SMOLENSK,Smolensk,RUS,iso:RU-SMO,forest,870,0.72,0.65,false
+RUS-TAMBOV,Tambov,RUS,iso:RU-TAM,plains,950,0.62,0.60,false
+RUS-TVER,Tver,RUS,iso:RU-TVE,forest,1200,0.76,0.65,false
+RUS-TULA,Tula,RUS,iso:RU-TUL,plains,1500,0.75,0.85,false
+RUS-YAROSLAVL,Yaroslavl,RUS,iso:RU-YAR,forest,1180,0.82,0.80,false
+RUS-ROSTOV,Rostov,RUS,iso:RU-ROS,steppe,4150,0.68,0.60,false
+RUS-KRASNODAR,Krasnodar,RUS,iso:RU-KDA,plains,5850,0.56,0.75,false
+RUS-VOLGOGRAD,Volgograd,RUS,iso:RU-VGG,steppe,2440,0.77,0.65,false
+RUS-ADYGEA,Adygea,RUS,iso:RU-AD,hills,500,0.48,0.50,false
+RUS-NORTH-CAUCASUS,North Caucasus and Lower Volga,RUS,iso:RU-AST;iso:RU-KL;iso:RU-DA;iso:RU-IN;iso:RU-KB;iso:RU-KC;iso:RU-SE;iso:RU-CE;iso:RU-STA,mountains,11485,0.52,0.42,false
+RUS-VOLGA,Volga,RUS,iso:RU-BA;iso:RU-ME;iso:RU-MO;iso:RU-TA;iso:RU-UD;iso:RU-CU;iso:RU-PER;iso:RU-KIR;iso:RU-NIZ;iso:RU-ORE;iso:RU-PNZ;iso:RU-SAM;iso:RU-SAR;iso:RU-ULY,plains,28500,0.72,0.75,false
+RUS-URALS,Urals,RUS,iso:RU-KGN;iso:RU-SVE;iso:RU-TYU;iso:RU-CHE;iso:RU-KHM;iso:RU-YAN;iso:RU-X01~,forest,12300,0.82,1.55,false
+RUS-SIBERIA,Siberia,RUS,iso:RU-AL;iso:RU-ALT;iso:RU-IRK;iso:RU-KEM;iso:RU-KYA;iso:RU-NVS;iso:RU-OMS;iso:RU-TOM;iso:RU-TY;iso:RU-KK,forest,16600,0.74,0.80,false
+RUS-FAR-EAST,Far East,RUS,iso:RU-BU;iso:RU-ZAB;iso:RU-SA;iso:RU-KAM;iso:RU-PRI;iso:RU-KHA;iso:RU-AMU;iso:RU-MAG;iso:RU-SAK;iso:RU-YEV;iso:RU-CHU,forest,7800,0.73,1.15,false
+TUR-ADANA,Adana,TUR,iso:TR-01,plains,2270,0.85,0.80,false
+TUR-ADIYAMAN,Adıyaman,TUR,iso:TR-02,hills,610,0.62,0.55,false
+TUR-AFYONKARAHISAR,Afyonkarahisar,TUR,iso:TR-03,hills,750,0.62,0.80,false
+TUR-AGRI,Ağrı,TUR,iso:TR-04,mountains,500,0.62,0.38,false
+TUR-AMASYA,Amasya,TUR,iso:TR-05,hills,340,0.62,0.75,false
+TUR-ANKARA,Ankara,TUR,iso:TR-06,steppe,5860,0.93,1.35,true
+TUR-ANTALYA,Antalya,TUR,iso:TR-07,mountains,2720,0.75,1.05,false
+TUR-ARTVIN,Artvin,TUR,iso:TR-08,mountains,170,0.62,0.90,false
+TUR-AYDIN,Aydın,TUR,iso:TR-09,hills,1180,0.60,0.85,false
+TUR-BALIKESIR,Balıkesir,TUR,iso:TR-10,hills,1280,0.60,0.90,false
+TUR-BILECIK,Bilecik,TUR,iso:TR-11,hills,230,0.62,1.05,false
+TUR-BINGOL,Bingöl,TUR,iso:TR-12,mountains,290,0.62,0.55,false
+TUR-BITLIS,Bitlis,TUR,iso:TR-13,mountains,360,0.62,0.45,false
+TUR-BOLU,Bolu,TUR,iso:TR-14,forest,320,0.62,1.00,false
+TUR-BURDUR,Burdur,TUR,iso:TR-15,hills,280,0.62,0.85,false
+TUR-BURSA,Bursa,TUR,iso:TR-16,hills,3240,0.88,1.15,false
+TUR-CANAKKALE,Çanakkale,TUR,iso:TR-17,hills,570,0.62,1.00,false
+TUR-CANKIRI,Çankırı,TUR,iso:TR-18,steppe,200,0.62,0.75,false
+TUR-CORUM,Çorum,TUR,iso:TR-19,steppe,520,0.62,0.75,false
+TUR-DENIZLI,Denizli,TUR,iso:TR-20,hills,1060,0.68,0.95,false
+TUR-DIYARBAKIR,Diyarbakır,TUR,iso:TR-21,steppe,1820,0.65,0.55,false
+TUR-EDIRNE,Edirne,TUR,iso:TR-22,plains,420,0.62,0.95,false
+TUR-ELAZIG,Elazığ,TUR,iso:TR-23,hills,600,0.70,0.75,false
+TUR-ERZINCAN,Erzincan,TUR,iso:TR-24,mountains,240,0.62,0.80,false
+TUR-ERZURUM,Erzurum,TUR,iso:TR-25,mountains,750,0.70,0.60,false
+TUR-ESKISEHIR,Eskişehir,TUR,iso:TR-26,steppe,920,0.90,1.05,false
+TUR-GAZIANTEP,Gaziantep,TUR,iso:TR-27,steppe,2180,0.85,0.80,false
+TUR-GIRESUN,Giresun,TUR,iso:TR-28,forest,450,0.62,0.70,false
+TUR-GUMUSHANE,Gümüşhane,TUR,iso:TR-29,mountains,140,0.62,0.70,false
+TUR-HAKKARI,Hakkâri,TUR,iso:TR-30,mountains,290,0.62,0.45,false
+TUR-HATAY,Hatay,TUR,iso:TR-31,hills,1540,0.65,0.70,false
+TUR-ISPARTA,Isparta,TUR,iso:TR-32,mountains,450,0.62,0.80,false
+TUR-MERSIN,Mersin,TUR,iso:TR-33,mountains,1950,0.80,0.85,false
+TUR-ISTANBUL,Istanbul,TUR,iso:TR-34,urban,15700,0.99,1.55,false
+TUR-IZMIR,İzmir,TUR,iso:TR-35,hills,4490,0.92,1.20,false
+TUR-KARS,Kars,TUR,iso:TR-36,mountains,270,0.62,0.50,false
+TUR-KASTAMONU,Kastamonu,TUR,iso:TR-37,forest,390,0.62,0.80,false
+TUR-KAYSERI,Kayseri,TUR,iso:TR-38,steppe,1450,0.80,0.85,false
+TUR-KIRKLARELI,Kırklareli,TUR,iso:TR-39,plains,380,0.62,1.10,false
+TUR-KIRSEHIR,Kırşehir,TUR,iso:TR-40,steppe,245,0.62,0.70,false
+TUR-KOCAELI,Kocaeli,TUR,iso:TR-41,hills,2130,0.86,1.60,false
+TUR-KONYA,Konya,TUR,iso:TR-42,steppe,2330,0.75,0.80,false
+TUR-KUTAHYA,Kütahya,TUR,iso:TR-43,hills,580,0.62,0.85,false
+TUR-MALATYA,Malatya,TUR,iso:TR-44,mountains,750,0.70,0.70,false
+TUR-MANISA,Manisa,TUR,iso:TR-45,hills,1480,0.60,0.95,false
+TUR-KAHRAMANMARAS,Kahramanmaraş,TUR,iso:TR-46,mountains,1120,0.65,0.70,false
+TUR-MARDIN,Mardin,TUR,iso:TR-47,steppe,890,0.62,0.55,false
+TUR-MUGLA,Muğla,TUR,iso:TR-48,hills,1070,0.55,1.05,false
+TUR-MUS,Muş,TUR,iso:TR-49,mountains,400,0.62,0.40,false
+TUR-NEVSEHIR,Nevşehir,TUR,iso:TR-50,steppe,320,0.62,0.75,false
+TUR-NIGDE,Niğde,TUR,iso:TR-51,steppe,370,0.62,0.75,false
+TUR-ORDU,Ordu,TUR,iso:TR-52,forest,770,0.62,0.65,false
+TUR-RIZE,Rize,TUR,iso:TR-53,mountains,345,0.62,0.85,false
+TUR-SAKARYA,Sakarya,TUR,iso:TR-54,plains,1100,0.60,0.90,false
+TUR-SAMSUN,Samsun,TUR,iso:TR-55,plains,1380,0.65,0.80,false
+TUR-SIIRT,Siirt,TUR,iso:TR-56,mountains,330,0.62,0.50,false
+TUR-SINOP,Sinop,TUR,iso:TR-57,forest,225,0.62,0.70,false
+TUR-SIVAS,Sivas,TUR,iso:TR-58,steppe,640,0.62,0.70,false
+TUR-TEKIRDAG,Tekirdağ,TUR,iso:TR-59,plains,1180,0.70,1.10,false
+TUR-TOKAT,Tokat,TUR,iso:TR-60,hills,600,0.62,0.65,false
+TUR-TRABZON,Trabzon,TUR,iso:TR-61,mountains,820,0.62,0.80,false
+TUR-TUNCELI,Tunceli,TUR,iso:TR-62,mountains,90,0.62,0.75,false
+TUR-SANLIURFA,Şanlıurfa,TUR,iso:TR-63,steppe,2240,0.55,0.45,false
+TUR-USAK,Uşak,TUR,iso:TR-64,hills,380,0.62,0.85,false
+TUR-VAN,Van,TUR,iso:TR-65,mountains,1130,0.55,0.40,false
+TUR-YOZGAT,Yozgat,TUR,iso:TR-66,steppe,420,0.62,0.65,false
+TUR-ZONGULDAK,Zonguldak,TUR,iso:TR-67,forest,590,0.62,0.85,false
+TUR-AKSARAY,Aksaray,TUR,iso:TR-68,steppe,440,0.62,0.75,false
+TUR-BAYBURT,Bayburt,TUR,iso:TR-69,mountains,85,0.62,0.70,false
+TUR-KARAMAN,Karaman,TUR,iso:TR-70,steppe,265,0.62,0.85,false
+TUR-KIRIKKALE,Kırıkkale,TUR,iso:TR-71,steppe,280,0.62,0.75,false
+TUR-BATMAN,Batman,TUR,iso:TR-72,steppe,650,0.62,0.50,false
+TUR-SIRNAK,Şırnak,TUR,iso:TR-73,mountains,570,0.62,0.50,false
+TUR-BARTIN,Bartın,TUR,iso:TR-74,forest,205,0.62,0.75,false
+TUR-ARDAHAN,Ardahan,TUR,iso:TR-75,mountains,90,0.62,0.55,false
+TUR-IGDIR,Iğdır,TUR,iso:TR-76,plains,205,0.62,0.50,false
+TUR-YALOVA,Yalova,TUR,iso:TR-77,hills,310,0.75,1.10,false
+TUR-KARABUK,Karabük,TUR,iso:TR-78,forest,255,0.62,0.90,false
+TUR-KILIS,Kilis,TUR,iso:TR-79,steppe,155,0.62,0.55,false
+TUR-OSMANIYE,Osmaniye,TUR,iso:TR-80,hills,560,0.70,0.65,false
+TUR-DUZCE,Düzce,TUR,iso:TR-81,forest,410,0.62,0.80,false

@@ -1,0 +1,129 @@
+id: LTU
+name: Lithuania
+adjective: Lithuanian
+sources:
+  - "Statistics Lithuania / IMF (GDP ≈$90bn) — approximate"
+  - "Seimas composition after Oct 2024 election; Ruginienė government (2025) — approximate"
+  - "Defense budget 2026 plan ≈5% of GDP — estimate"
+population: { total: 2890000, growthRate: -0.002, workingAgeShare: 0.63, over65Share: 0.21, livingStandard: 70, education: 80, healthcare: 66, poverty: 0.2 }
+economy:
+  currency: EUR
+  fxRegime: euro
+  gdpBn: 90
+  potentialGrowth: 0.025
+  growth: 0.027
+  outputGap: 0.0
+  inflation: 0.037
+  unemployment: 0.07
+  naturalUnemployment: 0.065
+  policyRate: 0.02
+  neutralRealRate: 0.0
+  cbIndependence: 0.95
+  debtToGdp: 0.4
+  reservesBn: 5
+  riskPremium: 0.006
+  effectiveInterestRate: 0.025
+  revenue: { income: 0.075, corporate: 0.02, consumption: 0.11, social: 0.09, other: 0.065 }
+  taxRates: { incomeTop: 0.32, corporate: 0.16, vat: 0.21 }
+  spending: { defense: 0.04, social: 0.13, health: 0.06, education: 0.05, infrastructure: 0.03, administration: 0.05, other: 0.02 }
+  exportsBn: 45
+  importsBn: 50
+  commodityProduction: { grain: 6 }
+  commodityConsumption: { oil: 0.06, gas: 2, grain: 3 }
+  energyImportDependence: 0.7
+energy: { productionTwh: 6, consumptionTwh: 13, nuclearGw: 0, renewablesGw: 3 }
+intelCapability: 0.55
+stateCapacity: 0.7
+corruption: 0.3
+government:
+  regimeType: semi_presidential_republic
+  regimeLabel: "Semi-presidential parliamentary republic"
+  democracy: true
+  euMember: true
+  leader: LTU-nauseda
+  headOfState: LTU-nauseda
+  headOfGovernment: LTU-ruginiene
+  rulingParties: [LSDP, NA, LVZS]
+  parties:
+    - { id: LSDP, name: "Social Democratic Party", short: LSDP, economic: -0.4, social: 0.0, westward: 0.8, support: 0.22, leader: "Inga Ruginienė" }
+    - { id: TS, name: "Homeland Union – Christian Democrats", short: TS-LKD, economic: 0.4, social: 0.4, westward: 1.0, support: 0.2 }
+    - { id: NA, name: "Dawn of Nemunas", short: NA, economic: -0.2, social: 0.7, westward: 0.2, support: 0.1, leader: "Remigijus Žemaitaitis" }
+    - { id: DEMO, name: "Democrats 'For Lithuania'", short: DSVL, economic: 0.0, social: 0.1, westward: 0.9, support: 0.12 }
+    - { id: LS, name: "Liberal Movement", short: LS, economic: 0.6, social: -0.6, westward: 1.0, support: 0.12 }
+    - { id: LVZS, name: "Farmers and Greens Union", short: LVŽS, economic: -0.3, social: 0.5, westward: 0.6, support: 0.1 }
+    - { id: OTH, name: "Others", short: Other, economic: 0.0, social: 0.0, westward: 0.6, support: 0.14 }
+  legislature:
+    name: Seimas
+    chambers:
+      - { id: seimas, name: Seimas, total: 141, electoralSystem: mixed, seats: { LSDP: 52, TS: 28, NA: 20, DEMO: 14, LS: 12, LVZS: 8, OTH: 7 } }
+  blocs:
+    - { template: urban_professionals, size: 0.3, clout: 0.25, satisfaction: 35 }
+    - { template: rural_conservatives, size: 0.22, clout: 0.12, satisfaction: 35, stance: { westward: 0.6 } }
+    - { template: pensioners, size: 0.22, clout: 0.1, satisfaction: 30, stance: { westward: 0.6 } }
+    - { template: industrial_workers, size: 0.16, clout: 0.1, satisfaction: 30, stance: { westward: 0.5 } }
+    - { template: minorities, name: "Russian- and Polish-speaking minorities", size: 0.1, clout: 0.05, satisfaction: 35, stance: { westward: 0.2 } }
+    - { template: security_establishment, size: 0.0, clout: 0.18, satisfaction: 60, stance: { westward: 1.0 } }
+    - { template: business_elite, size: 0.0, clout: 0.2, satisfaction: 40 }
+  elections:
+    - { id: ltu-seimas-2028, kind: legislative, date: "2028-10", chamberId: seimas, description: "Seimas election", termYears: 4 }
+    - { id: ltu-pres-2029, kind: presidential, date: "2029-05", description: "presidential election", termYears: 5 }
+  laws: { conscription: selective, pressFreedom: 0.85, retirementAge: 65, immigration: managed }
+  approval: 32
+  stability: 64
+  legitimacy: 78
+  eliteLoyalty: 60
+  militaryLoyalty: 82
+persons:
+  - id: LTU-nauseda
+    name: Gitanas Nausėda
+    title: President
+    birthYear: 1964
+    inOfficeSince: "2019-07"
+    personality: { riskTolerance: 0.4, agreeableness: 0.6, honesty: 0.7, ego: 0.4, pragmatism: 0.6, paranoia: 0.6 }
+    ideologyNote: "Centrist; leads foreign and defense policy; very hawkish on Russia and Belarus."
+    speakingStyle: "Earnest, alarmed about Russia and Belarus, small-state realism; frequent references to NATO's eastern flank."
+    biography: "President since 2019, re-elected in 2024; chairs the State Defence Council."
+  - id: LTU-ruginiene
+    name: Inga Ruginienė
+    title: Prime Minister
+    birthYear: 1981
+    partyId: LSDP
+    inOfficeSince: "2025-09"
+    personality: { riskTolerance: 0.35, agreeableness: 0.6, honesty: 0.65, ego: 0.45, pragmatism: 0.7, paranoia: 0.4 }
+    ideologyNote: "Social democrat, former trade-union leader."
+    speakingStyle: "Plain-spoken."
+    biography: "Prime minister since September 2025."
+military:
+  activePersonnel: 23000
+  reserves: 100000
+  stockpile: { ifv: 10, artillery: 4, sam_short: 4 }
+  production: { drone: 80 }
+  munitions: 40
+  munitionsProduction: 1
+  readinessBase: 0.7
+  doctrineQuality: 0.65
+  techLevel: 0.7
+units:
+  - { id: LTU-IRONWOLF, name: "Mechanised Infantry Brigade 'Iron Wolf'", kind: mechanized_brigade, personnel: 6000, location: LTU-KAUNAS, equipment: { ifv: 90, artillery: 30, mlrs: 8, sam_short: 6 } }
+  - { id: LTU-ZEMAITIJA, name: "Motorised Infantry Brigade 'Žemaitija'", kind: motorized_brigade, personnel: 4000, location: LTU-KLAIPEDA, equipment: { ifv: 40, artillery: 10, sam_short: 4 } }
+  - { id: LTU-AUKSTAITIJA, name: "Motorised Infantry Brigade 'Aukštaitija'", kind: motorized_brigade, personnel: 3500, location: LTU-PANEVEZYS, equipment: { ifv: 30, artillery: 8 } }
+  - { id: LTU-KASP, name: "National Defence Volunteer Forces", kind: territorial_defense, personnel: 6000, location: LTU-VILNIUS, equipment: { drone: 200 } }
+  - { id: LTU-AF, name: "Lithuanian Air Force & air defense", domain: air, kind: tactical_air, personnel: 1500, location: LTU-SIAULIAI, equipment: { sam_short: 8 } }
+strategy:
+  objectives:
+    - { kind: national_security, weight: 1.0 }
+    - { kind: deter_adversary, weight: 1.0, target: RUS }
+    - { kind: alliance_cohesion, weight: 1.0 }
+    - { kind: eu_integration, weight: 0.7 }
+    - { kind: energy_security, weight: 0.6 }
+  postures: { RUS: adversary, BLR: adversary, USA: ally, POL: ally, DEU: ally, FRA: ally, GBR: ally, UKR: ally, TUR: partner, CHN: rival }
+  hiddenAgenda:
+    - "Lock in the permanent German brigade and more US rotational forces"
+    - "Keep Ukraine's war a top EU priority"
+  redLines:
+    - { description: "Any closure of the Suwałki gap", key: "suwalki" }
+provinceOverrides:
+  LTU-VILNIUS: { fortification: 10 }
+  LTU-ALYTUS: { fortification: 10 }
+  LTU-UTENA: { fortification: 10 }
+  LTU-MARIJAMPOLE: { fortification: 10 }

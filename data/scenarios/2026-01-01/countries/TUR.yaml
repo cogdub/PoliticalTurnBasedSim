@@ -1,0 +1,125 @@
+id: TUR
+name: Turkey
+adjective: Turkish
+sources:
+  - "TurkStat / IMF WEO Oct 2025 (GDP ≈$1.45tn, inflation ≈31%) — approximate"
+  - "CBRT policy rate 38% (Dec 2025) — verify"
+  - "Grand National Assembly composition — approximate"
+population: { total: 85800000, growthRate: 0.004, workingAgeShare: 0.68, over65Share: 0.1, livingStandard: 58, education: 66, healthcare: 62, poverty: 0.14 }
+economy:
+  currency: TRY
+  fxRegime: managed
+  gdpBn: 1450
+  potentialGrowth: 0.035
+  growth: 0.035
+  outputGap: 0.0
+  inflation: 0.31
+  inflationTarget: 0.05
+  unemployment: 0.085
+  naturalUnemployment: 0.09
+  policyRate: 0.38
+  neutralRealRate: 0.04
+  cbIndependence: 0.35
+  debtToGdp: 0.25
+  reservesBn: 180
+  riskPremium: 0.03
+  effectiveInterestRate: 0.12
+  revenue: { income: 0.05, corporate: 0.025, consumption: 0.11, social: 0.075, other: 0.04 }
+  taxRates: { incomeTop: 0.4, corporate: 0.25, vat: 0.2 }
+  spending: { defense: 0.021, social: 0.105, health: 0.04, education: 0.04, infrastructure: 0.03, administration: 0.05, other: 0.015 }
+  exportsBn: 270
+  importsBn: 350
+  commodityProduction: { grain: 38, gas: 4 }
+  commodityConsumption: { oil: 1.1, gas: 55, grain: 38 }
+  energyImportDependence: 0.7
+energy: { productionTwh: 330, consumptionTwh: 335, nuclearGw: 0, renewablesGw: 65 }
+intelCapability: 0.7
+stateCapacity: 0.6
+corruption: 0.55
+hiddenResources: { rare_earths: 400 }
+knownResources: { natural_gas_sakarya: 300 }
+techs: { advanced_drones: 1 }
+government:
+  regimeType: presidential_republic
+  regimeLabel: "Executive presidential republic (competitive authoritarian tendencies)"
+  democracy: true
+  leader: TUR-erdogan
+  headOfState: TUR-erdogan
+  headOfGovernment: TUR-erdogan
+  rulingParties: [AKP, MHP]
+  parties:
+    - { id: AKP, name: "Justice and Development Party", short: AKP, economic: 0.3, social: 0.7, westward: 0.0, support: 0.31, leader: "Recep Tayyip Erdoğan" }
+    - { id: CHP, name: "Republican People's Party", short: CHP, economic: -0.3, social: -0.4, westward: 0.5, support: 0.32, leader: "Özgür Özel" }
+    - { id: DEM, name: "DEM Party", short: DEM, economic: -0.6, social: -0.5, westward: 0.3, support: 0.09 }
+    - { id: MHP, name: "Nationalist Movement Party", short: MHP, economic: 0.2, social: 0.9, westward: -0.2, support: 0.07 }
+    - { id: IYI, name: "İYİ Party", short: İYİ, economic: 0.3, social: 0.5, westward: 0.4, support: 0.05 }
+    - { id: OTH, name: "Others (Zafer, YRP, etc.)", short: Other, economic: 0.2, social: 0.6, westward: -0.1, support: 0.16 }
+  legislature:
+    name: Grand National Assembly
+    chambers:
+      - { id: tbmm, name: Grand National Assembly, total: 600, electoralSystem: pr, seats: { AKP: 272, CHP: 138, DEM: 56, MHP: 47, IYI: 30, OTH: 57 } }
+  institutions:
+    - { kind: constitutional_court, name: "Constitutional Court", independence: 0.3, loyalty: 0.7 }
+    - { kind: central_bank, name: "Central Bank of the Republic of Türkiye", independence: 0.35, loyalty: 0.6 }
+    - { kind: military, name: "Turkish Armed Forces", independence: 0.25, loyalty: 0.8 }
+    - { kind: security_services, name: "MİT / police", independence: 0.15, loyalty: 0.85 }
+    - { kind: bureaucracy, name: "Civil service", independence: 0.2, loyalty: 0.8 }
+    - { kind: media, name: "Media (largely pro-government)", independence: 0.3, loyalty: 0.6 }
+  blocs:
+    - { template: rural_conservatives, name: "Conservative pious voters", size: 0.32, clout: 0.2, satisfaction: 52, stance: { westward: -0.1 } }
+    - { template: urban_professionals, name: "Secular urban middle class", size: 0.28, clout: 0.15, satisfaction: 25, stance: { westward: 0.5 } }
+    - { template: industrial_workers, size: 0.18, clout: 0.08, satisfaction: 32, stance: { westward: 0.1 } }
+    - { template: minorities, name: "Kurdish voters", size: 0.12, clout: 0.05, satisfaction: 38 }
+    - { template: nationalists, size: 0.1, clout: 0.1, satisfaction: 50, stance: { westward: -0.2 } }
+    - { template: business_elite, size: 0.0, clout: 0.22, satisfaction: 45, stance: { westward: 0.2 } }
+    - { template: security_establishment, size: 0.0, clout: 0.2, satisfaction: 60, stance: { westward: 0.1 } }
+  elections:
+    - { id: tur-2028, kind: presidential, date: "2028-05", description: "presidential and parliamentary elections", termYears: 5 }
+  laws: { conscription: universal, pressFreedom: 0.3, retirementAge: 60, immigration: managed }
+  approval: 42
+  stability: 58
+  legitimacy: 55
+  eliteLoyalty: 65
+  militaryLoyalty: 72
+persons:
+  - id: TUR-erdogan
+    name: Recep Tayyip Erdoğan
+    title: President
+    birthYear: 1954
+    partyId: AKP
+    inOfficeSince: "2014-08"
+    personality: { riskTolerance: 0.6, agreeableness: 0.45, honesty: 0.4, ego: 0.9, pragmatism: 0.85, paranoia: 0.6 }
+    ideologyNote: "Islamist-conservative nationalist; balances between Russia and the West; positions Turkey as indispensable mediator."
+    speakingStyle: "Assertive and grandiloquent; presents Turkey as indispensable; transactional; complains of Western double standards."
+    biography: "Prime minister 2003–2014, president since 2014."
+military:
+  activePersonnel: 355000
+  reserves: 380000
+  stockpile: { mbt: 400, ifv: 300, artillery: 150, drone: 150 }
+  production: { drone: 30, ifv: 8, artillery: 3, mlrs: 2, mbt: 1, cruise_missile: 4, sam_short: 2, warship: 0.08 }
+  munitions: 300
+  munitionsProduction: 10
+  readinessBase: 0.7
+  doctrineQuality: 0.7
+  techLevel: 0.7
+units:
+  - { id: TUR-1A, name: "First Army (Thrace)", kind: field_army, personnel: 70000, location: TUR-ISTANBUL, equipment: { mbt: 450, ifv: 350, artillery: 250, mlrs: 80, sam_short: 25 } }
+  - { id: TUR-2A, name: "Second Army (Southeast)", kind: field_army, personnel: 90000, location: TUR-MALATYA, equipment: { mbt: 550, ifv: 400, artillery: 300, mlrs: 120, attack_helicopter: 40, drone: 250 } }
+  - { id: TUR-3A, name: "Third Army (East)", kind: field_army, personnel: 70000, location: TUR-ERZINCAN, equipment: { mbt: 450, ifv: 300, artillery: 250, mlrs: 80 } }
+  - { id: TUR-AEGEAN, name: "Aegean Army", kind: field_army, personnel: 40000, location: TUR-IZMIR, equipment: { mbt: 250, ifv: 200, artillery: 120, mlrs: 40, attack_helicopter: 20 } }
+  - { id: TUR-AF, name: "Turkish Air Force", domain: air, kind: tactical_air, personnel: 50000, location: TUR-ESKISEHIR, equipment: { fighter: 245, drone: 200, sam_long: 4, sam_short: 60 } }
+  - { id: TUR-NAVY, name: "Turkish Naval Forces", domain: naval, kind: fleet, personnel: 45000, location: TUR-KOCAELI, equipment: { warship: 16, submarine: 12 } }
+strategy:
+  objectives:
+    - { kind: regional_influence, weight: 1.0 }
+    - { kind: strategic_autonomy, weight: 0.9 }
+    - { kind: economic_growth, weight: 0.8 }
+    - { kind: regime_survival, weight: 0.7 }
+    - { kind: national_security, weight: 0.6 }
+  postures: { RUS: partner, UKR: partner, USA: partner, DEU: partner, POL: partner, GBR: partner, FRA: neutral, LTU: neutral, BLR: neutral, CHN: neutral }
+  hiddenAgenda:
+    - "Mediate between Russia and Ukraine to raise Turkey's standing while keeping trade with Russia"
+    - "Win readmission to the F-35 program or a large F-16/Eurofighter deal"
+    - "Keep the CHP opposition off balance through the courts"
+  redLines:
+    - { description: "Western support for Kurdish armed groups", key: "pkk_support" }

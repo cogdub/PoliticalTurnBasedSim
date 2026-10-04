@@ -1,0 +1,28 @@
+{
+  "name": "politicalturnbasedsim",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "dev:server": "npm run dev -w @gs/server",
+    "dev:client": "npm run dev -w @gs/client",
+    "dev": "concurrently -n server,client \"npm run dev:server\" \"npm run dev:client\"",
+    "cli": "tsx apps/cli/src/main.ts",
+    "scenario:build": "tsx apps/cli/src/main.ts scenario-check"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "concurrently": "^10.0.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3"
+  }
+}

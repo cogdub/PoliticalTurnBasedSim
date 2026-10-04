@@ -1,0 +1,152 @@
+id: RUS
+name: Russia
+adjective: Russian
+sources:
+  - "IMF WEO Oct 2025 / Rosstat (GDP ≈$2.1tn, growth ≈1%, inflation ≈6.5%) — approximate"
+  - "Bank of Russia key rate 16% (Dec 2025) — verify"
+  - "Federal budget 2026 (defense ≈6.3% of GDP; security spending additional) — estimate"
+  - "Force groupings and equipment: open-source estimates (low confidence)"
+population: { total: 143500000, growthRate: -0.004, workingAgeShare: 0.6, over65Share: 0.17, livingStandard: 55, education: 72, healthcare: 55, poverty: 0.09 }
+economy:
+  currency: RUB
+  fxRegime: float
+  gdpBn: 2100
+  potentialGrowth: 0.012
+  growth: 0.01
+  outputGap: 0.005
+  inflation: 0.065
+  inflationTarget: 0.04
+  unemployment: 0.022
+  naturalUnemployment: 0.03
+  policyRate: 0.16
+  neutralRealRate: 0.04
+  cbIndependence: 0.55
+  debtToGdp: 0.17
+  reservesBn: 600
+  treasuryCashBn: 50
+  riskPremium: 0.025
+  effectiveInterestRate: 0.085
+  revenue: { income: 0.04, corporate: 0.06, consumption: 0.08, social: 0.07, other: 0.05, resource: 0.045 }
+  taxRates: { incomeTop: 0.22, corporate: 0.25, vat: 0.22 }
+  spending: { defense: 0.063, social: 0.12, health: 0.04, education: 0.035, infrastructure: 0.02, administration: 0.05, other: 0.02 }
+  exportsBn: 410
+  importsBn: 290
+  commodityProduction: { oil: 9.3, gas: 630, grain: 140 }
+  commodityConsumption: { oil: 3.6, gas: 480, grain: 85 }
+  energyImportDependence: 0.0
+  confidence: 0.45
+energy: { productionTwh: 1150, consumptionTwh: 1100, nuclearGw: 28, renewablesGw: 6 }
+intelCapability: 0.85
+stateCapacity: 0.6
+corruption: 0.7
+techs: { hypersonic_missiles: 1 }
+government:
+  regimeType: authoritarian_presidential
+  regimeLabel: "Authoritarian presidential system"
+  democracy: false
+  leader: RUS-putin
+  headOfState: RUS-putin
+  headOfGovernment: RUS-mishustin
+  rulingParties: [UR]
+  parties:
+    - { id: UR, name: "United Russia", short: UR, economic: 0.2, social: 0.8, westward: -0.9, support: 0.5 }
+    - { id: KPRF, name: "Communist Party", short: KPRF, economic: -0.8, social: 0.6, westward: -0.8, support: 0.15 }
+    - { id: LDPR, name: "LDPR", short: LDPR, economic: 0.1, social: 0.9, westward: -0.9, support: 0.1 }
+    - { id: SRZP, name: "A Just Russia", short: SR, economic: -0.5, social: 0.5, westward: -0.7, support: 0.08 }
+    - { id: NP, name: "New People", short: NP, economic: 0.4, social: 0.0, westward: -0.4, support: 0.07 }
+  legislature:
+    name: Federal Assembly
+    chambers:
+      - { id: duma, name: State Duma, total: 450, electoralSystem: mixed, canBlock: false, seats: { UR: 327, KPRF: 57, LDPR: 23, SRZP: 28, NP: 15 } }
+  institutions:
+    - { kind: constitutional_court, name: "Constitutional Court", independence: 0.05, loyalty: 0.95 }
+    - { kind: central_bank, name: "Bank of Russia", independence: 0.55, loyalty: 0.8 }
+    - { kind: military, name: "Armed Forces", independence: 0.2, loyalty: 0.8 }
+    - { kind: security_services, name: "FSB / Rosgvardia", independence: 0.1, loyalty: 0.92 }
+    - { kind: bureaucracy, name: "State apparatus", independence: 0.1, loyalty: 0.85 }
+  blocs:
+    - { template: regime_elites, size: 0.02, clout: 0.3, satisfaction: 60 }
+    - { template: security_establishment, size: 0.05, clout: 0.3, satisfaction: 70, stance: { westward: -0.9 } }
+    - { template: business_elite, size: 0.02, clout: 0.12, satisfaction: 45, stance: { westward: -0.2 } }
+    - { template: industrial_workers, size: 0.35, clout: 0.08, satisfaction: 55, stance: { westward: -0.6 } }
+    - { template: pensioners, size: 0.26, clout: 0.08, satisfaction: 55, stance: { westward: -0.6 } }
+    - { template: urban_professionals, size: 0.2, clout: 0.07, satisfaction: 40, stance: { westward: 0.1 } }
+    - { template: minorities, size: 0.1, clout: 0.05, satisfaction: 45, stance: { westward: -0.3 } }
+  elections:
+    - { id: rus-duma-2026, kind: legislative, date: "2026-09", chamberId: duma, competitive: false, description: "State Duma election", termYears: 5 }
+  laws: { conscription: universal, pressFreedom: 0.1, oppositionAllowed: false, retirementAge: 63, immigration: managed }
+  approval: 75
+  stability: 68
+  legitimacy: 50
+  eliteLoyalty: 65
+  militaryLoyalty: 72
+persons:
+  - id: RUS-putin
+    name: Vladimir Putin
+    title: President
+    birthYear: 1952
+    inOfficeSince: "2000-05"
+    personality: { riskTolerance: 0.65, agreeableness: 0.2, honesty: 0.15, ego: 0.7, pragmatism: 0.6, paranoia: 0.85 }
+    ideologyNote: "Imperial-revisionist nationalist; sees the war as existential and the West as declining."
+    speakingStyle: "Cold, legalistic, long historical digressions, sardonic irony; never concedes publicly; frames demands as 'root causes' and 'realities on the ground'."
+    biography: "Leader of Russia since 1999–2000; ordered the full-scale invasion of Ukraine in February 2022."
+    healthRisk: 1
+  - id: RUS-mishustin
+    name: Mikhail Mishustin
+    title: Prime Minister
+    birthYear: 1966
+    partyId: UR
+    personality: { riskTolerance: 0.3, agreeableness: 0.5, honesty: 0.4, ego: 0.4, pragmatism: 0.8, paranoia: 0.5 }
+    ideologyNote: "Technocrat."
+    speakingStyle: "Dry, technocratic."
+    biography: "Prime minister since 2020."
+military:
+  activePersonnel: 1300000
+  reserves: 1500000
+  mobilization: partial
+  nuclear: true
+  stockpile: { mbt: 2500, ifv: 4000, artillery: 2500, mlrs: 300, drone: 8000, cruise_missile: 900, sam_long: 30, sam_short: 200 }
+  production: { mbt: 80, ifv: 110, artillery: 35, mlrs: 8, fighter: 3, attack_helicopter: 2, drone: 3500, cruise_missile: 160, sam_long: 1, sam_short: 6, warship: 0.1, submarine: 0.05 }
+  munitions: 3000
+  munitionsProduction: 300
+  readinessBase: 0.65
+  doctrineQuality: 0.6
+  techLevel: 0.65
+units:
+  - { id: RUS-GF-CEN, name: "Group of Forces 'Center' (Pokrovsk axis)", kind: army_group, personnel: 190000, location: UKR-DONETSK-OCC, morale: 0.6, experience: 0.7, equipment: { mbt: 450, ifv: 1100, artillery: 900, mlrs: 220, sam_short: 60, drone: 6000 } }
+  - { id: RUS-GF-SOU, name: "Group of Forces 'South' (Kostiantynivka axis)", kind: army_group, personnel: 120000, location: UKR-DONETSK-OCC, morale: 0.6, experience: 0.7, equipment: { mbt: 280, ifv: 700, artillery: 550, mlrs: 130, sam_short: 40, drone: 4000 } }
+  - { id: RUS-GF-EAS, name: "Group of Forces 'East' (Huliaipole axis)", kind: army_group, personnel: 110000, location: UKR-ZAPORIZHZHIA-OCC, morale: 0.6, experience: 0.65, equipment: { mbt: 260, ifv: 650, artillery: 500, mlrs: 120, sam_short: 40, drone: 3500 } }
+  - { id: RUS-GF-DNE, name: "Group of Forces 'Dnepr'", kind: army_group, personnel: 70000, location: UKR-KHERSON-OCC, morale: 0.55, experience: 0.6, equipment: { mbt: 120, ifv: 350, artillery: 300, mlrs: 70, sam_short: 30, drone: 2000 } }
+  - { id: RUS-GF-WES, name: "Group of Forces 'West' (Kupiansk–Lyman axis)", kind: army_group, personnel: 110000, location: UKR-LUHANSK, morale: 0.6, experience: 0.65, equipment: { mbt: 260, ifv: 650, artillery: 500, mlrs: 110, sam_short: 40, drone: 3500 } }
+  - { id: RUS-GF-NOR, name: "Group of Forces 'North' (Sumy–Kharkiv border)", kind: army_group, personnel: 70000, location: RUS-BELGOROD, morale: 0.6, experience: 0.6, equipment: { mbt: 150, ifv: 400, artillery: 300, mlrs: 60, sam_short: 30, drone: 2500 } }
+  - { id: RUS-CRIMEA, name: "Crimea grouping", kind: army_corps, personnel: 35000, location: UKR-CRIMEA, posture: garrison, equipment: { mbt: 80, ifv: 250, artillery: 150, mlrs: 40, sam_long: 6, sam_short: 30 } }
+  - { id: RUS-LMD, name: "Leningrad Military District formations", kind: army_corps, personnel: 60000, location: RUS-LENINGRAD, posture: garrison, morale: 0.65, equipment: { mbt: 250, ifv: 500, artillery: 250, mlrs: 60, sam_long: 6, sam_short: 30 } }
+  - { id: RUS-KAL, name: "11th Army Corps (Kaliningrad)", kind: army_corps, personnel: 18000, location: RUS-KALININGRAD, posture: garrison, equipment: { mbt: 60, ifv: 200, artillery: 90, mlrs: 30, sam_long: 4, sam_short: 20, cruise_missile: 40 } }
+  - { id: RUS-MMD, name: "Moscow Military District reserve", kind: army_corps, personnel: 90000, location: RUS-MOSCOW, posture: reserve, morale: 0.65, equipment: { mbt: 300, ifv: 700, artillery: 300, mlrs: 60, sam_long: 10, sam_short: 40 } }
+  - { id: RUS-SMD, name: "Southern Military District reserve", kind: army_corps, personnel: 50000, location: RUS-ROSTOV, posture: reserve, equipment: { mbt: 150, ifv: 350, artillery: 200, mlrs: 50, sam_short: 30 } }
+  - { id: RUS-CMD, name: "Central Military District", kind: army_corps, personnel: 60000, location: RUS-URALS, posture: garrison, equipment: { mbt: 200, ifv: 400, artillery: 200, mlrs: 40, sam_long: 6 } }
+  - { id: RUS-EMD, name: "Eastern Military District", kind: army_corps, personnel: 80000, location: RUS-FAR-EAST, posture: garrison, equipment: { mbt: 300, ifv: 600, artillery: 300, mlrs: 60, sam_long: 10 } }
+  - { id: RUS-VKS, name: "Aerospace Forces (VKS)", domain: air, kind: tactical_air, personnel: 150000, location: RUS-ROSTOV, equipment: { fighter: 950, attack_helicopter: 280, sam_long: 60, sam_short: 300 } }
+  - { id: RUS-NF, name: "Northern Fleet", domain: naval, kind: fleet, personnel: 40000, location: RUS-MURMANSK, equipment: { warship: 30, submarine: 28 } }
+  - { id: RUS-BSF, name: "Black Sea Fleet (Novorossiysk)", domain: naval, kind: fleet, personnel: 15000, location: RUS-KRASNODAR, equipment: { warship: 12, submarine: 4, cruise_missile: 80 } }
+  - { id: RUS-BAF, name: "Baltic Fleet", domain: naval, kind: fleet, personnel: 15000, location: RUS-KALININGRAD, equipment: { warship: 15, submarine: 1 } }
+  - { id: RUS-PF, name: "Pacific Fleet", domain: naval, kind: fleet, personnel: 30000, location: RUS-FAR-EAST, equipment: { warship: 25, submarine: 20 } }
+strategy:
+  objectives:
+    - { kind: regime_survival, weight: 1.0 }
+    - { kind: territorial_revision, weight: 1.0, target: UKR, note: "Full control of Donetsk, Luhansk, Zaporizhzhia and Kherson oblasts; a neutral, disarmed Ukraine" }
+    - { kind: great_power_status, weight: 0.8 }
+    - { kind: regional_influence, weight: 0.7 }
+    - { kind: deter_adversary, weight: 0.6, target: USA }
+  postures: { UKR: adversary, USA: rival, POL: adversary, LTU: adversary, GBR: adversary, DEU: rival, FRA: rival, BLR: ally, CHN: partner, TUR: partner }
+  hiddenAgenda:
+    - "Seize the remainder of Donetsk oblast in 2026"
+    - "Wait out Western support while negotiating to split Washington from Europe"
+    - "Probe NATO cohesion with hybrid operations, drones and sabotage in Poland and the Baltics"
+  redLines:
+    - { description: "NATO troops deployed inside Ukraine", key: "nato_troops_in_ukraine" }
+    - { description: "Ukraine joining NATO", key: "ukraine_nato", target: UKR }
+    - { description: "Returning annexed regions to Ukraine", key: "cede_annexed" }
+  plan:
+    goal: "Capture the rest of Donetsk oblast (Kramatorsk–Sloviansk agglomeration) and push on Zaporizhzhia"
+    steps: ["Sustain attritional pressure on the Donetsk front", "Strike Ukrainian energy infrastructure through winter", "Negotiate from strength with Washington"]

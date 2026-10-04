@@ -1,0 +1,118 @@
+id: CHN
+name: China
+adjective: Chinese
+sources:
+  - "NBS / IMF WEO Oct 2025 (GDP ≈$19.4tn, growth ≈4.8%, CPI ≈0%) — approximate"
+  - "PBoC 7-day reverse repo 1.4% — verify"
+  - "PLA strength ≈2.0m; theater-command aggregation — open-source estimates"
+population: { total: 1408000000, growthRate: -0.001, workingAgeShare: 0.68, over65Share: 0.15, livingStandard: 58, education: 70, healthcare: 62, poverty: 0.03 }
+economy:
+  currency: CNY
+  fxRegime: managed
+  gdpBn: 19400
+  potentialGrowth: 0.042
+  growth: 0.048
+  outputGap: -0.01
+  inflation: 0.002
+  inflationTarget: 0.02
+  unemployment: 0.051
+  naturalUnemployment: 0.05
+  policyRate: 0.014
+  neutralRealRate: 0.012
+  cbIndependence: 0.2
+  debtToGdp: 0.9
+  reservesBn: 3300
+  riskPremium: 0.0
+  effectiveInterestRate: 0.025
+  revenue: { income: 0.012, corporate: 0.035, consumption: 0.08, social: 0.06, other: 0.07 }
+  taxRates: { incomeTop: 0.45, corporate: 0.25, vat: 0.13 }
+  spending: { defense: 0.016, social: 0.08, health: 0.035, education: 0.04, infrastructure: 0.05, administration: 0.035, other: 0.02 }
+  exportsBn: 3600
+  importsBn: 2580
+  commodityProduction: { oil: 4.3, gas: 250, grain: 640 }
+  commodityConsumption: { oil: 16.5, gas: 430, grain: 700 }
+  energyImportDependence: 0.25
+  confidence: 0.5
+energy: { productionTwh: 9500, consumptionTwh: 9400, nuclearGw: 58, renewablesGw: 1600 }
+intelCapability: 0.85
+stateCapacity: 0.8
+corruption: 0.45
+techs: { advanced_drones: 1, hypersonic_missiles: 1, battery_storage: 1 }
+government:
+  regimeType: one_party_state
+  regimeLabel: "One-party socialist state"
+  democracy: false
+  leader: CHN-xi
+  headOfState: CHN-xi
+  headOfGovernment: CHN-li
+  rulingParties: [CCP]
+  parties:
+    - { id: CCP, name: "Chinese Communist Party", short: CCP, economic: -0.2, social: 0.8, westward: -0.7, support: 1.0 }
+  legislature:
+    name: National People's Congress
+    chambers:
+      - { id: npc, name: National People's Congress, total: 2977, electoralSystem: appointed, canBlock: false, seats: { CCP: 2977 } }
+  blocs:
+    - { template: regime_elites, name: "Party elite", size: 0.06, clout: 0.4, satisfaction: 65, stance: { westward: -0.7 } }
+    - { template: security_establishment, name: "PLA & security apparatus", size: 0.02, clout: 0.25, satisfaction: 65, stance: { westward: -0.8 } }
+    - { template: urban_professionals, name: "Urban middle class", size: 0.35, clout: 0.15, satisfaction: 55, stance: { westward: -0.2, social: 0.2 } }
+    - { template: industrial_workers, name: "Workers & migrant labor", size: 0.35, clout: 0.1, satisfaction: 55, stance: { westward: -0.4 } }
+    - { template: youth, name: "Young graduates", size: 0.22, clout: 0.1, satisfaction: 45, stance: { westward: -0.2, social: 0.2 } }
+  elections: []
+  laws: { conscription: selective, pressFreedom: 0.05, oppositionAllowed: false, retirementAge: 61, immigration: restrictive }
+  approval: 70
+  stability: 78
+  legitimacy: 60
+  eliteLoyalty: 75
+  militaryLoyalty: 80
+persons:
+  - id: CHN-xi
+    name: Xi Jinping
+    title: President & General Secretary
+    birthYear: 1953
+    inOfficeSince: "2012-11"
+    personality: { riskTolerance: 0.35, agreeableness: 0.4, honesty: 0.4, ego: 0.75, pragmatism: 0.75, paranoia: 0.6 }
+    ideologyNote: "Party supremacy, national rejuvenation, opposes US hegemony; values stability and long time horizons."
+    speakingStyle: "Formal and abstract ('win-win cooperation', 'core interests', 'mutual respect'); avoids specifics; patient."
+    biography: "General Secretary of the CCP since 2012; third term as president since 2023."
+  - id: CHN-li
+    name: Li Qiang
+    title: Premier
+    birthYear: 1959
+    partyId: CCP
+    personality: { riskTolerance: 0.3, agreeableness: 0.55, honesty: 0.45, ego: 0.4, pragmatism: 0.8, paranoia: 0.4 }
+    ideologyNote: "Xi loyalist; pro-business technocrat."
+    speakingStyle: "Pragmatic, economic focus."
+    biography: "Premier since 2023."
+military:
+  activePersonnel: 2035000
+  reserves: 510000
+  nuclear: true
+  stockpile: { mbt: 1500, ifv: 2000, artillery: 1500, drone: 3000, cruise_missile: 2000, sam_short: 300 }
+  production: { mbt: 25, ifv: 80, artillery: 30, mlrs: 8, fighter: 10, attack_helicopter: 4, drone: 3000, cruise_missile: 100, sam_long: 2, sam_short: 15, warship: 1, submarine: 0.3 }
+  munitions: 5000
+  munitionsProduction: 150
+  readinessBase: 0.7
+  doctrineQuality: 0.65
+  techLevel: 0.8
+units:
+  - { id: CHN-ETC, name: "Eastern Theater Command ground forces", kind: theater_army, personnel: 300000, location: CHN-EAST, equipment: { mbt: 1200, ifv: 2000, artillery: 1300, mlrs: 400, attack_helicopter: 100, sam_long: 40, sam_short: 300 } }
+  - { id: CHN-STC, name: "Southern Theater Command ground forces", kind: theater_army, personnel: 250000, location: CHN-SOUTH, equipment: { mbt: 900, ifv: 1600, artillery: 1000, mlrs: 300, attack_helicopter: 80, sam_long: 30 } }
+  - { id: CHN-NTC, name: "Northern Theater Command ground forces", kind: theater_army, personnel: 250000, location: CHN-NORTHEAST, equipment: { mbt: 1100, ifv: 1700, artillery: 1100, mlrs: 350, attack_helicopter: 80, sam_long: 30 } }
+  - { id: CHN-WTC, name: "Western Theater Command ground forces", kind: theater_army, personnel: 220000, location: CHN-NORTHWEST, equipment: { mbt: 800, ifv: 1300, artillery: 900, mlrs: 300, sam_long: 30 } }
+  - { id: CHN-CTC, name: "Central Theater Command ground forces", kind: theater_army, personnel: 200000, location: CHN-NORTH, equipment: { mbt: 700, ifv: 1200, artillery: 800, mlrs: 250, sam_long: 40 } }
+  - { id: CHN-PLAAF, name: "PLA Air Force & Navy aviation", domain: air, kind: tactical_air, personnel: 400000, location: CHN-EAST, equipment: { fighter: 1900, drone: 1500, sam_long: 60, sam_short: 400 } }
+  - { id: CHN-PLAN, name: "PLA Navy", domain: naval, kind: fleet, personnel: 300000, location: CHN-EAST, equipment: { warship: 140, submarine: 60, cruise_missile: 1500 } }
+strategy:
+  objectives:
+    - { kind: regime_survival, weight: 1.0 }
+    - { kind: economic_growth, weight: 1.0 }
+    - { kind: great_power_status, weight: 1.0 }
+    - { kind: regional_influence, weight: 0.8 }
+    - { kind: strategic_autonomy, weight: 0.7 }
+  postures: { USA: rival, RUS: partner, BLR: partner, UKR: neutral, POL: neutral, DEU: partner, FRA: neutral, GBR: neutral, LTU: rival, TUR: neutral }
+  hiddenAgenda:
+    - "Ensure Russia does not lose while avoiding secondary sanctions on major Chinese banks"
+    - "Extend the tariff truce with Washington on favorable terms; split Europe from the US on trade"
+  redLines:
+    - { description: "Official Western recognition of Taiwan", key: "taiwan" }

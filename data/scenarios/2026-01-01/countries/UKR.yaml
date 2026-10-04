@@ -1,0 +1,148 @@
+id: UKR
+name: Ukraine
+adjective: Ukrainian
+sources:
+  - "IMF WEO Oct 2025 / NBU (GDP ≈$205bn, inflation ≈11%, key rate 15.5%) — approximate"
+  - "Ministry of Finance (defense ≈26–30% of GDP; external financing ≈$40bn/yr) — estimate"
+  - "Verkhovna Rada factions (approximate; 401 sitting deputies)"
+  - "Armed forces strength and groupings: open-source estimates (low confidence)"
+population: { total: 36000000, growthRate: -0.01, workingAgeShare: 0.6, over65Share: 0.19, livingStandard: 38, education: 70, healthcare: 45, poverty: 0.3 }
+economy:
+  currency: UAH
+  fxRegime: managed
+  gdpBn: 205
+  potentialGrowth: 0.02
+  growth: 0.02
+  outputGap: -0.03
+  inflation: 0.11
+  inflationTarget: 0.05
+  unemployment: 0.11
+  naturalUnemployment: 0.09
+  policyRate: 0.155
+  neutralRealRate: 0.03
+  cbIndependence: 0.6
+  debtToGdp: 1.0
+  reservesBn: 50
+  concessionalDebtShare: 0.7
+  riskPremium: 0.03
+  effectiveInterestRate: 0.04
+  revenue: { income: 0.06, corporate: 0.035, consumption: 0.12, social: 0.08, other: 0.08 }
+  taxRates: { incomeTop: 0.23, corporate: 0.18, vat: 0.2 }
+  spending: { defense: 0.27, social: 0.1, health: 0.03, education: 0.04, infrastructure: 0.01, administration: 0.03, other: 0.01 }
+  exportsBn: 40
+  importsBn: 80
+  commodityProduction: { grain: 75, gas: 18 }
+  commodityConsumption: { oil: 0.2, gas: 20, grain: 25 }
+  energyImportDependence: 0.35
+energy: { productionTwh: 100, consumptionTwh: 105, nuclearGw: 7.8, renewablesGw: 10 }
+intelCapability: 0.75
+stateCapacity: 0.55
+corruption: 0.6
+hiddenResources: { lithium: 300, titanium: 400 }
+knownResources: { titanium: 200 }
+techs: { advanced_drones: 1 }
+government:
+  regimeType: semi_presidential_republic
+  regimeLabel: "Semi-presidential republic under martial law"
+  democracy: true
+  leader: UKR-zelensky
+  headOfState: UKR-zelensky
+  headOfGovernment: UKR-svyrydenko
+  rulingParties: [SN]
+  parties:
+    - { id: SN, name: "Servant of the People", short: SN, economic: 0.1, social: -0.1, westward: 0.9, support: 0.3, leader: "Volodymyr Zelensky" }
+    - { id: ES, name: "European Solidarity", short: ES, economic: 0.3, social: 0.3, westward: 1.0, support: 0.18, leader: "Petro Poroshenko" }
+    - { id: BAT, name: "Batkivshchyna", short: Bat, economic: -0.3, social: 0.3, westward: 0.6, support: 0.08, leader: "Yulia Tymoshenko" }
+    - { id: ZAL, name: "Military-led list (hypothetical)", short: Mil, economic: 0.1, social: 0.4, westward: 0.9, support: 0.26, leader: "Valerii Zaluzhnyi" }
+    - { id: HOL, name: "Holos & others", short: Other, economic: 0.3, social: -0.3, westward: 0.9, support: 0.12 }
+    - { id: OPZZh, name: "Opposition Platform – For Life (banned 2022)", short: OPZZh, economic: -0.3, social: 0.5, westward: -0.8, support: 0.06, banned: true }
+  legislature:
+    name: Verkhovna Rada
+    chambers:
+      - { id: rada, name: Verkhovna Rada, total: 401, electoralSystem: mixed, seats: { SN: 232, ES: 26, BAT: 24, HOL: 119 } }
+  blocs:
+    - { template: urban_professionals, size: 0.25, clout: 0.2, satisfaction: 45, stance: { westward: 0.95 } }
+    - { template: war_veterans, size: 0.2, clout: 0.25, satisfaction: 50 }
+    - { template: industrial_workers, size: 0.2, clout: 0.1, satisfaction: 40, stance: { westward: 0.7 } }
+    - { template: pensioners, size: 0.2, clout: 0.1, satisfaction: 35, stance: { westward: 0.6 } }
+    - { template: business_elite, size: 0.03, clout: 0.2, satisfaction: 45 }
+    - { template: youth, size: 0.12, clout: 0.15, satisfaction: 45, stance: { westward: 0.95 } }
+  elections: []
+  laws: { conscription: universal, pressFreedom: 0.55, retirementAge: 60, immigration: managed }
+  emergencyPowers: true
+  martialLaw: true
+  approval: 55
+  stability: 58
+  legitimacy: 70
+  eliteLoyalty: 60
+  militaryLoyalty: 75
+persons:
+  - id: UKR-zelensky
+    name: Volodymyr Zelensky
+    title: President
+    birthYear: 1978
+    partyId: SN
+    inOfficeSince: "2019-05"
+    personality: { riskTolerance: 0.6, agreeableness: 0.55, honesty: 0.65, ego: 0.5, pragmatism: 0.6, paranoia: 0.4 }
+    ideologyNote: "Wartime leader; priority is national survival, air defense, Western security guarantees."
+    speakingStyle: "Direct and emotional; appeals to shared values; insistent about air defense, sanctions and guarantees; never concedes territory publicly."
+    biography: "Elected president in 2019; has led Ukraine since Russia's full-scale invasion in February 2022. Martial law has postponed elections."
+  - id: UKR-svyrydenko
+    name: Yulia Svyrydenko
+    title: Prime Minister
+    birthYear: 1985
+    partyId: SN
+    inOfficeSince: "2025-07"
+    personality: { riskTolerance: 0.4, agreeableness: 0.6, honesty: 0.7, ego: 0.4, pragmatism: 0.8, paranoia: 0.3 }
+    ideologyNote: "Technocratic economist; negotiated the US–Ukraine minerals agreement."
+    speakingStyle: "Precise and technocratic."
+    biography: "Former First Deputy PM and Minister of Economy; prime minister since July 2025."
+military:
+  activePersonnel: 900000
+  reserves: 600000
+  mobilization: full
+  stockpile: { mbt: 80, ifv: 200, artillery: 80, drone: 30000, cruise_missile: 60, sam_short: 40, sam_long: 2 }
+  production: { drone: 9000, artillery: 8, ifv: 6, cruise_missile: 40, mlrs: 2 }
+  munitions: 500
+  munitionsProduction: 100
+  readinessBase: 0.7
+  doctrineQuality: 0.75
+  techLevel: 0.6
+units:
+  - { id: UKR-DON, name: "Donetsk front (OSG Khortytsia)", kind: army_group, personnel: 230000, location: UKR-DONETSK, morale: 0.55, experience: 0.8, equipment: { mbt: 300, ifv: 800, artillery: 500, mlrs: 120, sam_short: 60, drone: 12000 } }
+  - { id: UKR-ZAP, name: "Zaporizhzhia front (OSG Dnipro)", kind: army_group, personnel: 120000, location: UKR-ZAPORIZHZHIA, morale: 0.55, experience: 0.75, equipment: { mbt: 180, ifv: 450, artillery: 280, mlrs: 70, sam_short: 30, drone: 7000 } }
+  - { id: UKR-KHE, name: "Kherson grouping", kind: army_corps, personnel: 50000, location: UKR-KHERSON, morale: 0.6, experience: 0.7, equipment: { mbt: 40, ifv: 150, artillery: 120, mlrs: 30, drone: 3000 } }
+  - { id: UKR-KHA, name: "Kharkiv–Kupiansk grouping", kind: army_group, personnel: 120000, location: UKR-KHARKIV, morale: 0.6, experience: 0.75, equipment: { mbt: 160, ifv: 450, artillery: 260, mlrs: 60, sam_short: 30, drone: 6000 } }
+  - { id: UKR-NOR, name: "Northern grouping (Sumy–Chernihiv)", kind: army_corps, personnel: 70000, location: UKR-SUMY, morale: 0.6, experience: 0.65, equipment: { mbt: 80, ifv: 250, artillery: 140, mlrs: 30, drone: 4000 } }
+  - { id: UKR-RES, name: "Strategic reserve corps", kind: army_corps, personnel: 100000, location: UKR-DNIPROPETROVSK, posture: reserve, morale: 0.65, experience: 0.5, equipment: { mbt: 150, ifv: 350, artillery: 160, mlrs: 40, drone: 3000 } }
+  - { id: UKR-TDF, name: "Territorial Defence Forces (rear)", kind: territorial_defense, personnel: 120000, location: UKR-KYIV, posture: garrison, morale: 0.6, equipment: { ifv: 100, artillery: 40, drone: 2000 } }
+  - { id: UKR-AF, name: "Ukrainian Air Force & air defense", domain: air, kind: tactical_air, personnel: 45000, location: UKR-VINNYTSIA, equipment: { fighter: 85, sam_long: 22, sam_short: 120 } }
+  - { id: UKR-NAVY, name: "Ukrainian Navy (naval drones)", domain: naval, kind: fleet, personnel: 15000, location: UKR-ODESA, equipment: { drone: 300 } }
+strategy:
+  objectives:
+    - { kind: territorial_integrity, weight: 1.0 }
+    - { kind: national_security, weight: 1.0 }
+    - { kind: alliance_cohesion, weight: 0.9, note: "keep Western aid flowing" }
+    - { kind: eu_integration, weight: 0.8 }
+    - { kind: regime_survival, weight: 0.4 }
+  postures: { RUS: adversary, BLR: rival, USA: partner, POL: ally, DEU: ally, FRA: ally, GBR: ally, LTU: ally, TUR: partner, CHN: neutral }
+  hiddenAgenda:
+    - "Hold the Kramatorsk–Sloviansk fortress belt at almost any cost"
+    - "Accept a ceasefire on current lines only with binding Western security guarantees"
+    - "Keep striking Russian oil refineries to cut Moscow's war revenue"
+  redLines:
+    - { description: "Ceding territory Ukraine still controls", key: "cede_controlled_territory" }
+    - { description: "Legal recognition of occupied territory as Russian", key: "recognize_annexation" }
+    - { description: "Caps on the size of Ukraine's armed forces", key: "army_cap" }
+provinceOverrides:
+  UKR-DONETSK: { fortification: 70 }
+  UKR-ZAPORIZHZHIA: { fortification: 50 }
+  UKR-KHERSON: { fortification: 45 }
+  UKR-KHARKIV: { fortification: 40 }
+  UKR-SUMY: { fortification: 25 }
+  UKR-DNIPROPETROVSK: { fortification: 25 }
+  UKR-DONETSK-OCC: { fortification: 35, unrest: 40 }
+  UKR-ZAPORIZHZHIA-OCC: { fortification: 45, unrest: 40 }
+  UKR-KHERSON-OCC: { fortification: 50, unrest: 40 }
+  UKR-LUHANSK: { fortification: 20, unrest: 30 }
+  UKR-CRIMEA: { fortification: 40, unrest: 25 }

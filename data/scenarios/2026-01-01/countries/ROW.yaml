@@ -1,0 +1,69 @@
+id: ROW
+name: Rest of World
+adjective: Rest-of-World
+playable: false
+sources:
+  - "Residual: world totals (IMF WEO) minus simulated countries — approximate"
+population: { total: 6050000000, growthRate: 0.009, workingAgeShare: 0.64, over65Share: 0.09, livingStandard: 45, education: 55, healthcare: 50, poverty: 0.2 }
+economy:
+  currency: XDR
+  fxRegime: managed
+  gdpBn: 50000
+  potentialGrowth: 0.031
+  growth: 0.032
+  inflation: 0.035
+  inflationTarget: 0.03
+  unemployment: 0.06
+  naturalUnemployment: 0.06
+  policyRate: 0.045
+  neutralRealRate: 0.015
+  cbIndependence: 0.6
+  debtToGdp: 0.8
+  riskPremium: 0.02
+  effectiveInterestRate: 0.04
+  revenue: { income: 0.07, corporate: 0.03, consumption: 0.1, social: 0.05, other: 0.05 }
+  taxRates: { incomeTop: 0.3, corporate: 0.22, vat: 0.15 }
+  spending: { defense: 0.02, social: 0.11, health: 0.05, education: 0.045, infrastructure: 0.03, administration: 0.05, other: 0.01 }
+  exportsBn: 0
+  importsBn: 0
+  commodityProduction: { oil: 76, gas: 2200, grain: 1150 }
+  commodityConsumption: { oil: 56, gas: 2100, grain: 1450 }
+  energyImportDependence: 0.3
+energy: { productionTwh: 12000, consumptionTwh: 12000, nuclearGw: 90, renewablesGw: 1000 }
+intelCapability: 0.3
+stateCapacity: 0.5
+corruption: 0.4
+government:
+  regimeType: aggregate
+  regimeLabel: "Aggregate of non-simulated countries"
+  democracy: true
+  leader: ROW-sg
+  headOfState: ROW-sg
+  headOfGovernment: ROW-sg
+  rulingParties: []
+  parties: []
+  legislature: { name: none, chambers: [] }
+  blocs: []
+  laws: { conscription: none, pressFreedom: 0.5, retirementAge: 64 }
+  approval: 50
+  stability: 60
+  legitimacy: 60
+  eliteLoyalty: 60
+  militaryLoyalty: 60
+persons:
+  - id: ROW-sg
+    name: "(aggregate)"
+    title: "Rest of World"
+    birthYear: 1970
+    personality: { riskTolerance: 0.5, agreeableness: 0.5, honesty: 0.5, ego: 0.5, pragmatism: 0.5, paranoia: 0.5 }
+    healthRisk: 0
+military:
+  activePersonnel: 0
+  reserves: 0
+  munitions: 0
+  munitionsProduction: 0
+  readinessBase: 0.5
+  doctrineQuality: 0.5
+  techLevel: 0.5
+strategy:
+  objectives: []

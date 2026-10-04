@@ -1,0 +1,123 @@
+id: GBR
+name: United Kingdom
+adjective: British
+sources:
+  - "ONS / OBR / IMF WEO Oct 2025 (GDP ≈$3.9tn, CPI ≈3.4%) — approximate"
+  - "Bank Rate 3.75% after Dec 2025 cut — verify"
+  - "House of Commons composition late 2025 — approximate"
+population: { total: 69500000, growthRate: 0.006, workingAgeShare: 0.63, over65Share: 0.19, livingStandard: 79, education: 80, healthcare: 74, poverty: 0.17 }
+economy:
+  currency: GBP
+  fxRegime: float
+  gdpBn: 3900
+  potentialGrowth: 0.012
+  growth: 0.013
+  outputGap: -0.005
+  inflation: 0.034
+  unemployment: 0.05
+  naturalUnemployment: 0.045
+  policyRate: 0.0375
+  neutralRealRate: 0.01
+  cbIndependence: 0.9
+  debtToGdp: 0.96
+  reservesBn: 180
+  riskPremium: 0.007
+  effectiveInterestRate: 0.03
+  revenue: { income: 0.12, corporate: 0.03, consumption: 0.09, social: 0.07, other: 0.09, resource: 0.002 }
+  taxRates: { incomeTop: 0.45, corporate: 0.25, vat: 0.2 }
+  spending: { defense: 0.023, social: 0.14, health: 0.09, education: 0.045, infrastructure: 0.025, administration: 0.07, other: 0.02 }
+  exportsBn: 520
+  importsBn: 800
+  commodityProduction: { oil: 0.7, gas: 30, grain: 22 }
+  commodityConsumption: { oil: 1.4, gas: 65, grain: 22 }
+  energyImportDependence: 0.4
+energy: { productionTwh: 290, consumptionTwh: 320, nuclearGw: 6, renewablesGw: 60 }
+intelCapability: 0.9
+stateCapacity: 0.8
+corruption: 0.2
+techs: { ai_military: 1 }
+government:
+  regimeType: parliamentary_monarchy
+  regimeLabel: "Constitutional monarchy, parliamentary democracy"
+  democracy: true
+  leader: GBR-starmer
+  headOfState: GBR-charles
+  headOfGovernment: GBR-starmer
+  rulingParties: [LAB]
+  parties:
+    - { id: REF, name: "Reform UK", short: Reform, economic: 0.5, social: 0.8, westward: 0.1, support: 0.29, leader: "Nigel Farage" }
+    - { id: LAB, name: "Labour Party", short: Lab, economic: -0.3, social: -0.3, westward: 0.9, support: 0.18, leader: "Keir Starmer" }
+    - { id: CON, name: "Conservative Party", short: Con, economic: 0.6, social: 0.5, westward: 0.8, support: 0.17, leader: "Kemi Badenoch" }
+    - { id: GRN, name: "Green Party", short: Green, economic: -0.8, social: -0.8, westward: 0.3, support: 0.14, leader: "Zack Polanski" }
+    - { id: LD, name: "Liberal Democrats", short: LD, economic: -0.1, social: -0.6, westward: 0.95, support: 0.13, leader: "Ed Davey" }
+    - { id: SNP, name: "SNP & regional parties", short: SNP, economic: -0.4, social: -0.5, westward: 0.8, support: 0.05 }
+    - { id: OTH, name: "Others", short: Other, economic: 0, social: 0, westward: 0.4, support: 0.04 }
+  legislature:
+    name: Parliament
+    chambers:
+      - { id: commons, name: House of Commons, total: 650, electoralSystem: fptp, seats: { LAB: 398, CON: 120, LD: 72, REF: 6, SNP: 9, GRN: 4, OTH: 41 } }
+  blocs:
+    - { template: urban_professionals, size: 0.26, clout: 0.2, satisfaction: 28 }
+    - { template: industrial_workers, size: 0.24, clout: 0.12, satisfaction: 18 }
+    - { template: pensioners, size: 0.2, clout: 0.12, satisfaction: 22, stance: { westward: 0.5 } }
+    - { template: business_elite, size: 0.04, clout: 0.25, satisfaction: 25 }
+    - { template: nationalists, size: 0.14, clout: 0.08, satisfaction: 10, stance: { westward: 0.1 } }
+    - { template: youth, size: 0.12, clout: 0.08, satisfaction: 25 }
+    - { template: security_establishment, size: 0.0, clout: 0.15, satisfaction: 50, stance: { westward: 0.9 } }
+  elections:
+    - { id: gbr-ge-2029, kind: legislative, date: "2029-05", chamberId: commons, description: "general election", termYears: 5 }
+  laws: { conscription: none, pressFreedom: 0.85, retirementAge: 66, immigration: managed }
+  approval: 22
+  stability: 62
+  legitimacy: 78
+  eliteLoyalty: 55
+  militaryLoyalty: 80
+persons:
+  - id: GBR-starmer
+    name: Keir Starmer
+    title: Prime Minister
+    birthYear: 1962
+    partyId: LAB
+    inOfficeSince: "2024-07"
+    personality: { riskTolerance: 0.35, agreeableness: 0.65, honesty: 0.7, ego: 0.4, pragmatism: 0.7, paranoia: 0.3 }
+    ideologyNote: "Centre-left, institutionalist; staunch on Ukraine; seeks closer EU ties without rejoining."
+    speakingStyle: "Lawyerly, measured, cautious; stresses 'iron-clad' support, process and international law."
+    biography: "Prime minister since July 2024 after a landslide; now deeply unpopular as Reform UK leads polls."
+  - id: GBR-charles
+    name: King Charles III
+    title: King
+    birthYear: 1948
+    personality: { riskTolerance: 0.2, agreeableness: 0.75, honesty: 0.8, ego: 0.4, pragmatism: 0.7, paranoia: 0.2 }
+    ideologyNote: "Constitutional monarch; politically neutral."
+    speakingStyle: "Formal and courteous."
+    biography: "King of the United Kingdom since 2022."
+military:
+  activePersonnel: 138000
+  reserves: 32000
+  nuclear: true
+  stockpile: { mbt: 20, ifv: 60, artillery: 6, sam_short: 10 }
+  production: { fighter: 0.4, mlrs: 0.3, sam_short: 1, cruise_missile: 2, warship: 0.05, submarine: 0.02, drone: 300 }
+  munitions: 80
+  munitionsProduction: 4
+  readinessBase: 0.7
+  doctrineQuality: 0.8
+  techLevel: 0.85
+units:
+  - { id: GBR-3DIV, name: "3rd (UK) Division", kind: mechanized_division, personnel: 22000, location: GBR-SOUTH-WEST, equipment: { mbt: 140, ifv: 380, artillery: 20, mlrs: 30, sam_short: 10 } }
+  - { id: GBR-1DIV, name: "1st (UK) Division", kind: light_division, personnel: 18000, location: GBR-YORKSHIRE-AND-THE-HUMBER, equipment: { ifv: 150, artillery: 10, mlrs: 4 } }
+  - { id: GBR-16AA, name: "16 Air Assault Brigade", kind: airborne_brigade, personnel: 6000, location: GBR-EAST-OF-ENGLAND, equipment: { ifv: 20, attack_helicopter: 45 } }
+  - { id: GBR-RAF, name: "Royal Air Force", domain: air, kind: tactical_air, personnel: 31000, location: GBR-EAST-MIDLANDS, equipment: { fighter: 160, sam_short: 14 } }
+  - { id: GBR-RN, name: "Royal Navy", domain: naval, kind: fleet, personnel: 33000, location: GBR-SOUTH-WEST, equipment: { warship: 17, submarine: 10, cruise_missile: 100 } }
+strategy:
+  objectives:
+    - { kind: alliance_cohesion, weight: 1.0 }
+    - { kind: national_security, weight: 0.7 }
+    - { kind: deter_adversary, weight: 0.6, target: RUS }
+    - { kind: economic_growth, weight: 0.9 }
+    - { kind: re_election, weight: 0.5 }
+  postures: { RUS: adversary, BLR: rival, USA: ally, POL: ally, DEU: ally, FRA: ally, LTU: ally, UKR: ally, TUR: partner, CHN: rival }
+  hiddenAgenda:
+    - "Co-lead the coalition of the willing with France"
+    - "Deepen security and trade ties with the EU"
+  redLines:
+    - { description: "Attack on a NATO ally", key: "attack_nato" }

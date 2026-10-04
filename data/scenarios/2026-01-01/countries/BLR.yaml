@@ -1,0 +1,111 @@
+id: BLR
+name: Belarus
+adjective: Belarusian
+sources:
+  - "Belstat / IMF (GDP ≈$76bn) — approximate"
+  - "Union State security guarantees treaty (Dec 2024); Russian tactical nuclear weapons stationed in Belarus — reported"
+  - "Armed forces ≈48k — open-source estimate"
+population: { total: 9100000, growthRate: -0.005, workingAgeShare: 0.62, over65Share: 0.17, livingStandard: 52, education: 75, healthcare: 58, poverty: 0.05 }
+economy:
+  currency: BYN
+  fxRegime: managed
+  gdpBn: 76
+  potentialGrowth: 0.015
+  growth: 0.015
+  outputGap: 0.0
+  inflation: 0.07
+  inflationTarget: 0.05
+  unemployment: 0.03
+  naturalUnemployment: 0.035
+  policyRate: 0.095
+  neutralRealRate: 0.02
+  cbIndependence: 0.1
+  debtToGdp: 0.4
+  reservesBn: 10
+  riskPremium: 0.03
+  effectiveInterestRate: 0.06
+  revenue: { income: 0.04, corporate: 0.03, consumption: 0.12, social: 0.11, other: 0.06, resource: 0.01 }
+  taxRates: { incomeTop: 0.25, corporate: 0.2, vat: 0.2 }
+  spending: { defense: 0.016, social: 0.14, health: 0.045, education: 0.045, infrastructure: 0.03, administration: 0.06, other: 0.02 }
+  exportsBn: 45
+  importsBn: 50
+  commodityProduction: { grain: 8 }
+  commodityConsumption: { oil: 0.15, gas: 19, grain: 7 }
+  energyImportDependence: 0.6
+energy: { productionTwh: 40, consumptionTwh: 42, nuclearGw: 2.4, renewablesGw: 2 }
+intelCapability: 0.5
+stateCapacity: 0.5
+corruption: 0.6
+government:
+  regimeType: authoritarian_presidential
+  regimeLabel: "Personalist authoritarian presidential regime"
+  democracy: false
+  leader: BLR-lukashenko
+  headOfState: BLR-lukashenko
+  headOfGovernment: BLR-turchin
+  rulingParties: [BEL]
+  parties:
+    - { id: BEL, name: "Belaya Rus & pro-government parties", short: BR, economic: -0.2, social: 0.7, westward: -0.8, support: 0.8 }
+    - { id: OPP, name: "Exiled democratic opposition", short: Opp, economic: 0.3, social: -0.4, westward: 0.9, support: 0.2, banned: true }
+  legislature:
+    name: National Assembly
+    chambers:
+      - { id: house, name: House of Representatives, total: 110, electoralSystem: appointed, canBlock: false, seats: { BEL: 110 } }
+  blocs:
+    - { template: regime_elites, size: 0.02, clout: 0.35, satisfaction: 65, stance: { westward: -0.7 } }
+    - { template: security_establishment, size: 0.03, clout: 0.35, satisfaction: 70, stance: { westward: -0.8 } }
+    - { template: industrial_workers, size: 0.45, clout: 0.1, satisfaction: 50, stance: { westward: -0.3 } }
+    - { template: pensioners, size: 0.25, clout: 0.08, satisfaction: 55, stance: { westward: -0.4 } }
+    - { template: urban_professionals, size: 0.25, clout: 0.12, satisfaction: 30, stance: { westward: 0.6 } }
+  elections: []
+  laws: { conscription: universal, pressFreedom: 0.05, oppositionAllowed: false, retirementAge: 63, immigration: managed }
+  approval: 58
+  stability: 65
+  legitimacy: 35
+  eliteLoyalty: 70
+  militaryLoyalty: 75
+persons:
+  - id: BLR-lukashenko
+    name: Alexander Lukashenko
+    title: President
+    birthYear: 1954
+    inOfficeSince: "1994-07"
+    personality: { riskTolerance: 0.45, agreeableness: 0.4, honesty: 0.25, ego: 0.85, pragmatism: 0.65, paranoia: 0.8 }
+    ideologyNote: "Regime survival above all; dependent on Moscow but bargains with the West (prisoner releases for sanctions relief)."
+    speakingStyle: "Folksy, rambling, mixes threats and jokes; insists Belarus is sovereign yet loyal to Moscow."
+    biography: "Ruler of Belarus since 1994; began a seventh term in 2025."
+  - id: BLR-turchin
+    name: Alexander Turchin
+    title: Prime Minister
+    birthYear: 1975
+    personality: { riskTolerance: 0.3, agreeableness: 0.5, honesty: 0.4, ego: 0.3, pragmatism: 0.7, paranoia: 0.5 }
+    ideologyNote: "Regime technocrat."
+    speakingStyle: "Bureaucratic."
+    biography: "Prime minister since 2025."
+military:
+  activePersonnel: 48000
+  reserves: 290000
+  stockpile: { mbt: 300, ifv: 500, artillery: 200, mlrs: 50 }
+  production: { drone: 50, mlrs: 0.3 }
+  munitions: 400
+  munitionsProduction: 5
+  readinessBase: 0.55
+  doctrineQuality: 0.45
+  techLevel: 0.4
+units:
+  - { id: BLR-WOC, name: "Western Operational Command", kind: army_corps, personnel: 16000, location: BLR-GRODNO, equipment: { mbt: 200, ifv: 400, artillery: 150, mlrs: 70, sam_short: 30 } }
+  - { id: BLR-NWOC, name: "North-Western Operational Command", kind: army_corps, personnel: 13000, location: BLR-VITEBSK, equipment: { mbt: 150, ifv: 300, artillery: 120, mlrs: 60, sam_short: 25 } }
+  - { id: BLR-SOF, name: "Special Operations Forces", kind: airborne_brigade, personnel: 8000, location: BLR-MINSK, equipment: { ifv: 150, artillery: 30 } }
+  - { id: BLR-AF, name: "Air Force and Air Defence Forces", domain: air, kind: tactical_air, personnel: 11000, location: BLR-MINSK-CITY, equipment: { fighter: 45, sam_long: 20, sam_short: 60 } }
+strategy:
+  objectives:
+    - { kind: regime_survival, weight: 1.0 }
+    - { kind: alliance_cohesion, weight: 0.7, note: "with Russia (Union State)" }
+    - { kind: economic_growth, weight: 0.6 }
+    - { kind: neutrality, weight: 0.3, note: "avoid sending troops into Ukraine" }
+  postures: { RUS: ally, CHN: partner, UKR: rival, POL: rival, LTU: rival, USA: neutral, DEU: rival, FRA: rival, GBR: rival, TUR: neutral }
+  hiddenAgenda:
+    - "Avoid sending Belarusian troops into the war in Ukraine"
+    - "Trade political-prisoner releases for US/EU sanctions relief"
+  redLines:
+    - { description: "Western-backed regime change", key: "regime_change" }

@@ -1,0 +1,129 @@
+id: DEU
+name: Germany
+adjective: German
+sources:
+  - "Destatis / IMF WEO Oct 2025 (GDP ≈$5.0tn, growth ≈0.2%) — approximate"
+  - "Bundestag composition after Feb 2025 election"
+  - "Bundeswehr strength ≈182k; Panzerbrigade 45 build-up in Lithuania — approximate"
+  - "Defense ≈2.4% of GDP in 2025 rising under debt-brake exemption — estimate"
+population: { total: 83500000, growthRate: 0.001, workingAgeShare: 0.62, over65Share: 0.23, livingStandard: 84, education: 82, healthcare: 82, poverty: 0.15 }
+economy:
+  currency: EUR
+  fxRegime: euro
+  gdpBn: 5000
+  potentialGrowth: 0.007
+  growth: 0.002
+  outputGap: -0.015
+  inflation: 0.022
+  unemployment: 0.038
+  naturalUnemployment: 0.035
+  policyRate: 0.02
+  neutralRealRate: 0.0
+  cbIndependence: 0.95
+  debtToGdp: 0.64
+  reservesBn: 300
+  riskPremium: 0.002
+  effectiveInterestRate: 0.021
+  revenue: { income: 0.11, corporate: 0.025, consumption: 0.105, social: 0.175, other: 0.05 }
+  taxRates: { incomeTop: 0.45, corporate: 0.3, vat: 0.19 }
+  spending: { defense: 0.024, social: 0.21, health: 0.08, education: 0.045, infrastructure: 0.03, administration: 0.06, other: 0.035 }
+  exportsBn: 1700
+  importsBn: 1450
+  commodityProduction: { grain: 42, gas: 4 }
+  commodityConsumption: { oil: 2.0, gas: 80, grain: 40 }
+  energyImportDependence: 0.65
+energy: { productionTwh: 490, consumptionTwh: 510, nuclearGw: 0, renewablesGw: 180 }
+intelCapability: 0.6
+stateCapacity: 0.8
+corruption: 0.15
+hiddenResources: { lithium: 150 }
+techs: { advanced_semiconductors: 0 }
+government:
+  regimeType: federal_parliamentary_republic
+  regimeLabel: "Federal parliamentary republic"
+  democracy: true
+  euMember: true
+  leader: DEU-merz
+  headOfState: DEU-steinmeier
+  headOfGovernment: DEU-merz
+  rulingParties: [UNION, SPD]
+  parties:
+    - { id: UNION, name: "CDU/CSU", short: Union, economic: 0.4, social: 0.3, westward: 0.9, support: 0.26, leader: "Friedrich Merz" }
+    - { id: AFD, name: "Alternative for Germany", short: AfD, economic: 0.3, social: 0.9, westward: -0.5, support: 0.26, leader: "Alice Weidel" }
+    - { id: SPD, name: "Social Democratic Party", short: SPD, economic: -0.4, social: -0.2, westward: 0.7, support: 0.14, leader: "Lars Klingbeil" }
+    - { id: GRUENE, name: "Alliance 90/The Greens", short: Greens, economic: -0.3, social: -0.7, westward: 0.9, support: 0.11 }
+    - { id: LINKE, name: "The Left", short: Linke, economic: -0.8, social: -0.6, westward: -0.2, support: 0.11 }
+    - { id: BSW, name: "Sahra Wagenknecht Alliance", short: BSW, economic: -0.6, social: 0.4, westward: -0.7, support: 0.04 }
+    - { id: FDP, name: "Free Democratic Party", short: FDP, economic: 0.8, social: -0.3, westward: 0.8, support: 0.04 }
+    - { id: OTH, name: "Others", short: Other, economic: 0, social: 0, westward: 0.2, support: 0.04 }
+  legislature:
+    name: Bundestag
+    chambers:
+      - { id: bundestag, name: Bundestag, total: 630, electoralSystem: pr, seats: { UNION: 208, AFD: 152, SPD: 120, GRUENE: 85, LINKE: 64, OTH: 1 } }
+  blocs:
+    - { template: urban_professionals, size: 0.25, clout: 0.2, satisfaction: 35 }
+    - { template: industrial_workers, size: 0.22, clout: 0.15, satisfaction: 28 }
+    - { template: pensioners, size: 0.24, clout: 0.12, satisfaction: 35, stance: { westward: 0.5 } }
+    - { template: business_elite, size: 0.04, clout: 0.25, satisfaction: 30 }
+    - { template: nationalists, size: 0.15, clout: 0.08, satisfaction: 15, stance: { westward: -0.5 } }
+    - { template: youth, size: 0.1, clout: 0.08, satisfaction: 28 }
+    - { template: security_establishment, size: 0.0, clout: 0.12, satisfaction: 55, stance: { westward: 0.9 } }
+  elections:
+    - { id: deu-bt-2029, kind: legislative, date: "2029-03", chamberId: bundestag, description: "federal election", termYears: 4 }
+  laws: { conscription: selective, pressFreedom: 0.9, retirementAge: 67, immigration: managed }
+  approval: 27
+  stability: 66
+  legitimacy: 80
+  eliteLoyalty: 60
+  militaryLoyalty: 75
+persons:
+  - id: DEU-merz
+    name: Friedrich Merz
+    title: Chancellor
+    birthYear: 1955
+    partyId: UNION
+    inOfficeSince: "2025-05"
+    personality: { riskTolerance: 0.45, agreeableness: 0.5, honesty: 0.65, ego: 0.6, pragmatism: 0.65, paranoia: 0.3 }
+    ideologyNote: "Christian Democrat; fiscal conservative who unlocked defense spending; Atlanticist but wants European strategic capacity."
+    speakingStyle: "Business-like, formal, occasionally blunt; emphasizes German responsibility, NATO and economic competitiveness."
+    biography: "Chancellor since May 2025, leading a CDU/CSU–SPD coalition."
+  - id: DEU-steinmeier
+    name: Frank-Walter Steinmeier
+    title: Federal President
+    birthYear: 1956
+    partyId: SPD
+    personality: { riskTolerance: 0.3, agreeableness: 0.7, honesty: 0.7, ego: 0.4, pragmatism: 0.7, paranoia: 0.2 }
+    ideologyNote: "Ceremonial head of state."
+    speakingStyle: "Measured, statesmanlike."
+    biography: "Federal President since 2017."
+military:
+  activePersonnel: 182000
+  reserves: 34000
+  stockpile: { mbt: 40, ifv: 80, artillery: 10, sam_short: 10, drone: 300 }
+  production: { mbt: 4, ifv: 5, artillery: 3, mlrs: 0.5, sam_long: 0.2, sam_short: 1.5, drone: 200, cruise_missile: 3 }
+  munitions: 250
+  munitionsProduction: 25
+  readinessBase: 0.6
+  doctrineQuality: 0.65
+  techLevel: 0.85
+units:
+  - { id: DEU-1PD, name: "1st Panzer Division", kind: armored_division, personnel: 22000, location: DEU-LOWER-SAXONY, equipment: { mbt: 140, ifv: 300, artillery: 50, mlrs: 15, sam_short: 10 } }
+  - { id: DEU-10PD, name: "10th Panzer Division", kind: armored_division, personnel: 21000, location: DEU-BAVARIA, equipment: { mbt: 110, ifv: 260, artillery: 45, mlrs: 15, sam_short: 10 } }
+  - { id: DEU-DSK, name: "Rapid Forces Division", kind: airborne_division, personnel: 11000, location: DEU-HESSE, equipment: { ifv: 60, artillery: 10, attack_helicopter: 45 } }
+  - { id: DEU-PZBR45, name: "Panzerbrigade 45 (Lithuania)", kind: armored_brigade, personnel: 2500, location: LTU-KAUNAS, hostedBy: LTU, equipment: { mbt: 20, ifv: 40, artillery: 6 } }
+  - { id: DEU-LW, name: "Luftwaffe", domain: air, kind: tactical_air, personnel: 28000, location: DEU-RHINELAND-PALATINATE, equipment: { fighter: 215, sam_long: 9, sam_short: 18 } }
+  - { id: DEU-NAVY, name: "German Navy", domain: naval, kind: fleet, personnel: 16000, location: DEU-SCHLESWIG-HOLSTEIN, equipment: { warship: 11, submarine: 6 } }
+strategy:
+  objectives:
+    - { kind: alliance_cohesion, weight: 1.0 }
+    - { kind: economic_growth, weight: 1.0 }
+    - { kind: national_security, weight: 0.7 }
+    - { kind: eu_integration, weight: 0.8 }
+    - { kind: energy_security, weight: 0.5 }
+  postures: { RUS: rival, BLR: rival, USA: ally, POL: ally, FRA: ally, GBR: ally, LTU: ally, UKR: partner, TUR: partner, CHN: neutral }
+  hiddenAgenda:
+    - "Build the Bundeswehr into Europe's strongest conventional army without provoking direct confrontation with Russia"
+    - "Keep the US engaged in NATO while preparing European fallback options"
+    - "Protect German export industry from US and Chinese trade pressure"
+  redLines:
+    - { description: "Direct NATO–Russia war without US participation", key: "war_without_us" }

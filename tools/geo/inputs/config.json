@@ -1,0 +1,102 @@
+{
+  "simulatedCountries": [
+    "POL",
+    "DEU",
+    "FRA",
+    "GBR",
+    "USA",
+    "RUS",
+    "UKR",
+    "BLR",
+    "LTU",
+    "TUR",
+    "CHN"
+  ],
+  "extraSourceCountries": [
+    "HKG",
+    "MAC"
+  ],
+  "excludeSources": {
+    "_comment": "Source admin-1 features of simulated countries that are intentionally dropped.",
+    "f": [
+      "FRA:region=Guyane française",
+      "FRA:region=Martinique",
+      "FRA:region=Guadeloupe",
+      "FRA:region=Réunion",
+      "FRA:region=Mayotte"
+    ],
+    "iso": [
+      "CN-X01~"
+    ]
+  },
+  "populationTargetsMillions": {
+    "POL": 37.4,
+    "DEU": 83.5,
+    "FRA": 66.5,
+    "GBR": 69.5,
+    "USA": 342,
+    "RUS": 143.5,
+    "UKR": 36.0,
+    "BLR": 9.1,
+    "LTU": 2.89,
+    "TUR": 85.8,
+    "CHN": 1408
+  },
+  "populationSubTargetsMillions": [
+    {
+      "_comment": "UKR: Crimea + Sevastopol",
+      "ids": [
+        "UKR-CRIMEA",
+        "UKR-SEVASTOPOL"
+      ],
+      "total": 2.4
+    },
+    {
+      "_comment": "UKR: occupied mainland",
+      "ids": [
+        "UKR-LUHANSK",
+        "UKR-DONETSK-OCC",
+        "UKR-ZAPORIZHZHIA-OCC",
+        "UKR-KHERSON-OCC"
+      ],
+      "total": 2.6
+    }
+  ],
+  "controllerOverrides": {
+    "UKR-CRIMEA": "RUS",
+    "UKR-SEVASTOPOL": "RUS",
+    "UKR-LUHANSK": "RUS",
+    "UKR-DONETSK-OCC": "RUS",
+    "UKR-ZAPORIZHZHIA-OCC": "RUS",
+    "UKR-KHERSON-OCC": "RUS"
+  },
+  "straitLinks": [
+    [
+      "UKR-CRIMEA",
+      "RUS-KRASNODAR",
+      "Kerch Strait"
+    ],
+    [
+      "GBR-SOUTH-EAST",
+      "FRA-HAUTS-DE-FRANCE",
+      "Strait of Dover / Channel Tunnel"
+    ],
+    [
+      "GBR-NORTHERN-IRELAND",
+      "GBR-SCOTLAND",
+      "North Channel"
+    ],
+    [
+      "FRA-CORSICA",
+      "FRA-PROVENCE-ALPES-COTE-DAZUR",
+      "Ligurian Sea crossing"
+    ],
+    [
+      "TUR-ISTANBUL",
+      "TUR-YALOVA",
+      "Bosporus / Sea of Marmara (Istanbul - Asian shore)"
+    ]
+  ],
+  "minSharedBorderKm": 1.0,
+  "minCoastKm": 15
+}

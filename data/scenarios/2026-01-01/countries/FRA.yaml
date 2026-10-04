@@ -1,0 +1,127 @@
+id: FRA
+name: France
+adjective: French
+sources:
+  - "INSEE / IMF WEO Oct 2025 (GDP ≈$3.3tn, deficit ≈5.4%, debt ≈116%) — approximate"
+  - "Assemblée nationale group sizes after 2024 election — approximate"
+  - "Lecornu government (Oct 2025) — verify composition"
+population: { total: 68600000, growthRate: 0.002, workingAgeShare: 0.61, over65Share: 0.22, livingStandard: 80, education: 78, healthcare: 84, poverty: 0.14 }
+economy:
+  currency: EUR
+  fxRegime: euro
+  gdpBn: 3300
+  potentialGrowth: 0.009
+  growth: 0.007
+  outputGap: -0.01
+  inflation: 0.011
+  unemployment: 0.076
+  naturalUnemployment: 0.072
+  policyRate: 0.02
+  neutralRealRate: 0.0
+  cbIndependence: 0.95
+  debtToGdp: 1.16
+  reservesBn: 250
+  riskPremium: 0.009
+  effectiveInterestRate: 0.019
+  revenue: { income: 0.105, corporate: 0.03, consumption: 0.12, social: 0.19, other: 0.07 }
+  taxRates: { incomeTop: 0.45, corporate: 0.25, vat: 0.2 }
+  spending: { defense: 0.021, social: 0.25, health: 0.085, education: 0.05, infrastructure: 0.03, administration: 0.08, other: 0.03 }
+  exportsBn: 650
+  importsBn: 780
+  commodityProduction: { grain: 60 }
+  commodityConsumption: { oil: 1.4, gas: 38, grain: 35 }
+  energyImportDependence: 0.45
+energy: { productionTwh: 540, consumptionTwh: 450, nuclearGw: 61, renewablesGw: 75 }
+intelCapability: 0.75
+stateCapacity: 0.8
+corruption: 0.25
+hiddenResources: { lithium: 200 }
+techs: { small_modular_reactors: 0 }
+government:
+  regimeType: semi_presidential_republic
+  regimeLabel: "Semi-presidential republic (minority government)"
+  democracy: true
+  euMember: true
+  leader: FRA-macron
+  headOfState: FRA-macron
+  headOfGovernment: FRA-lecornu
+  rulingParties: [ENS, LR]
+  parties:
+    - { id: RN, name: "National Rally & allies", short: RN, economic: 0.0, social: 0.8, westward: -0.2, support: 0.33, leader: "Jordan Bardella" }
+    - { id: ENS, name: "Ensemble (Renaissance/MoDem/Horizons)", short: ENS, economic: 0.4, social: -0.2, westward: 0.9, support: 0.16, leader: "Ensemble candidate" }
+    - { id: LFI, name: "La France Insoumise", short: LFI, economic: -0.9, social: -0.6, westward: -0.3, support: 0.13, leader: "Jean-Luc Mélenchon" }
+    - { id: PS, name: "Socialist Party & allies", short: PS, economic: -0.5, social: -0.5, westward: 0.7, support: 0.12 }
+    - { id: LR, name: "The Republicans", short: LR, economic: 0.6, social: 0.5, westward: 0.7, support: 0.1, leader: "Bruno Retailleau" }
+    - { id: ECO, name: "Ecologists", short: Eco, economic: -0.5, social: -0.8, westward: 0.7, support: 0.06 }
+    - { id: REC, name: "Reconquête", short: Rec, economic: 0.5, social: 1.0, westward: -0.3, support: 0.05 }
+    - { id: OTH, name: "Others (LIOT etc.)", short: Other, economic: 0.0, social: 0.0, westward: 0.5, support: 0.05 }
+  legislature:
+    name: Parliament
+    chambers:
+      - { id: an, name: National Assembly, total: 577, electoralSystem: two_round, seats: { RN: 139, ENS: 163, LFI: 71, PS: 86, LR: 50, ECO: 38, OTH: 30 } }
+  blocs:
+    - { template: urban_professionals, size: 0.25, clout: 0.2, satisfaction: 30 }
+    - { template: industrial_workers, size: 0.25, clout: 0.12, satisfaction: 18 }
+    - { template: pensioners, size: 0.22, clout: 0.12, satisfaction: 28, stance: { westward: 0.5 } }
+    - { template: business_elite, size: 0.03, clout: 0.25, satisfaction: 32 }
+    - { template: nationalists, size: 0.15, clout: 0.08, satisfaction: 12, stance: { westward: -0.2 } }
+    - { template: youth, size: 0.1, clout: 0.08, satisfaction: 18 }
+    - { template: security_establishment, size: 0.0, clout: 0.15, satisfaction: 55, stance: { westward: 0.6 } }
+  elections:
+    - { id: fra-pres-2027, kind: presidential, date: "2027-04", description: "presidential election (Macron is term-limited)", termYears: 5 }
+  laws: { conscription: none, pressFreedom: 0.85, retirementAge: 64, immigration: managed }
+  approval: 22
+  stability: 50
+  legitimacy: 70
+  eliteLoyalty: 55
+  militaryLoyalty: 78
+persons:
+  - id: FRA-macron
+    name: Emmanuel Macron
+    title: President
+    birthYear: 1977
+    partyId: ENS
+    inOfficeSince: "2017-05"
+    personality: { riskTolerance: 0.55, agreeableness: 0.6, honesty: 0.6, ego: 0.8, pragmatism: 0.6, paranoia: 0.3 }
+    ideologyNote: "Liberal centrist; champion of 'European strategic autonomy'; leads coalition-of-the-willing planning for Ukraine."
+    speakingStyle: "Grand strategic framing, 'European sovereignty', long elaborate sentences; likes summits and initiatives."
+    biography: "President since 2017; second and final term ends 2027."
+  - id: FRA-lecornu
+    name: Sébastien Lecornu
+    title: Prime Minister
+    birthYear: 1986
+    partyId: ENS
+    personality: { riskTolerance: 0.35, agreeableness: 0.6, honesty: 0.6, ego: 0.4, pragmatism: 0.8, paranoia: 0.3 }
+    ideologyNote: "Macron loyalist; former armed forces minister."
+    speakingStyle: "Pragmatic, conciliatory."
+    biography: "Prime minister since autumn 2025, leading a fragile minority government."
+military:
+  activePersonnel: 200000
+  reserves: 40000
+  nuclear: true
+  stockpile: { mbt: 30, ifv: 50, artillery: 10, sam_short: 10 }
+  production: { artillery: 4, fighter: 1.2, ifv: 3, sam_long: 0.15, cruise_missile: 3, warship: 0.05, submarine: 0.03 }
+  munitions: 150
+  munitionsProduction: 8
+  readinessBase: 0.75
+  doctrineQuality: 0.8
+  techLevel: 0.85
+units:
+  - { id: FRA-1DIV, name: "1st Division", kind: mechanized_division, personnel: 26000, location: FRA-GRAND-EST, equipment: { mbt: 110, ifv: 300, artillery: 50, mlrs: 5, sam_short: 10 } }
+  - { id: FRA-3DIV, name: "3rd Division", kind: mechanized_division, personnel: 26000, location: FRA-PROVENCE-ALPES-COTE-DAZUR, equipment: { mbt: 90, ifv: 280, artillery: 45, mlrs: 4, sam_short: 10 } }
+  - { id: FRA-FS, name: "Special operations & airborne (11e BP)", kind: airborne_brigade, personnel: 9000, location: FRA-OCCITANIE, equipment: { ifv: 40, artillery: 10, attack_helicopter: 60 } }
+  - { id: FRA-AAE, name: "Air and Space Force", domain: air, kind: tactical_air, personnel: 40000, location: FRA-GRAND-EST, equipment: { fighter: 195, sam_long: 8, sam_short: 15 } }
+  - { id: FRA-MN, name: "French Navy", domain: naval, kind: fleet, personnel: 39000, location: FRA-BRITTANY, equipment: { warship: 20, submarine: 10, cruise_missile: 150 } }
+strategy:
+  objectives:
+    - { kind: strategic_autonomy, weight: 0.9 }
+    - { kind: eu_integration, weight: 0.9 }
+    - { kind: great_power_status, weight: 0.7 }
+    - { kind: alliance_cohesion, weight: 0.7 }
+    - { kind: economic_growth, weight: 0.6 }
+  postures: { RUS: rival, BLR: rival, USA: ally, POL: ally, DEU: ally, GBR: ally, LTU: ally, UKR: partner, TUR: neutral, CHN: neutral }
+  hiddenAgenda:
+    - "Lead a European 'coalition of the willing' security guarantee for Ukraine"
+    - "Position France's nuclear deterrent as a European alternative to US guarantees"
+  redLines:
+    - { description: "Nuclear threats against France", key: "nuclear_threat" }
